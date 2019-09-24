@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 
 import "./App.css";
-import NavBarr from "./NavBarr";
+import NavTag from "./NavTag";
 import SignUp from "./SignUp";
 import SignIn from "./SignIn";
 import Home from "./Home";
@@ -11,7 +11,8 @@ import AddToEmailList from "./AddToEmailList";
 function App() {
   return (
     <div className="App">
-      <NavBarr />
+      <NavTag />
+      <AddToEmailList />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/SignIn" component={SignIn} />
