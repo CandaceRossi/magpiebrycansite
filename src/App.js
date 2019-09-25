@@ -1,51 +1,47 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
-
+import React, { useState } from "react";
+import { Route, Switch, Link } from "react-router-dom";
 import "./App.css";
-import NavTag from "./NavTag";
-import SignUp from "./SignUp";
-import SignIn from "./SignIn";
-import Home from "./Home";
-import AddToEmailList from "./AddToEmailList";
+import data from "./data";
+import NavTag from "./components/NavTag";
+import SignUp from "./components/SignUp";
+import SignIn from "./components/SignIn";
+import AddToEmailList from "./components/AddToEmailList";
+import ItemList from "./components/ItemList";
+import Item from "./components/Item";
 
-function App() {
+const App = () => {
+  const [product, setProduct] = useState(data);
+  console.log("maybe a problemo", product);
   return (
     <div className="App">
-      <NavTag />
-      <AddToEmailList />
+      <h1 className="store-header">Magpie Designs</h1>
+      <div className="component-links">
+        <NavTag />
+
+        <Link to="/">Home</Link>
+        <Link to="/ItemList">Shop</Link>
+        <Link to="/SignUp">Sign Up</Link>
+        <Link to="/SignIn">Sign In</Link>
+
+        <AddToEmailList />
+      </div>
       <Switch>
-        <Route exact path="/" component={Home} />
         <Route exact path="/SignIn" component={SignIn} />
-        <Route path="/SignUp" component={SignUp} />
-        <Route path="/components/AddToEmailList" component={AddToEmailList} />
+        <Route exact path="/SignUp" component={SignUp} />
+        <Route exact path="/AddToEmailList" component={AddToEmailList} />
+        <Route
+          exact
+          path="/ItemList"
+          render={props => <ItemList items={product} {...props} />}
+        />
+        <Route
+          exact
+          path="/ItemList/:id"
+          render={props => <Item items={product} {...props} />}
+        />
       </Switch>
     </div>
   );
-}
+};
 
 export default App;
-
-// const [product, setProduct] = useState();
-// // const [note, setNote ] = useState({})
-// // const contactUs = note => {
-// //   const newNote = {
-// //     id: Date.now(),
-// //     title: note.title,
-// //     body: note.body
-// //   }
-// //   setNote([...notes, newNote])
-// // }
-// import ItemsList from "./ItemsList";
-// import Item from "./Item";
-// import data from "./data";
-
-// {
-//   /* <Route
-//           path="/components/ItemList"
-//           render={props => <ItemsList {...props} items={product} />}
-//         />
-//         <Route
-//           path="/components/Item"
-//           render={props => <Item {...props} items={product} />}
-//         /> */
-// }

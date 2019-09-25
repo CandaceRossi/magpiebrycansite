@@ -101,6 +101,7 @@ section {
 
 body {
     line-height: 1;
+    height: 100vh;
 }
 
 ol,
@@ -124,6 +125,7 @@ q:after {
 .App {
     background-color: bisque;
     margin: auto;
+    height: 100vh;
 }
 
 .home-wrapper {

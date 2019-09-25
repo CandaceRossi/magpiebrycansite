@@ -3,7 +3,7 @@ import { Route, NavLink } from "react-router-dom";
 import Description from "./Description";
 import Shipping from "./Shipping";
 
-function Item(props) {
+const Item = props => {
   const item = props.items.find(
     thing => thing.id === Number(props.match.params.id)
   );
@@ -21,18 +21,15 @@ function Item(props) {
         </div>
       </div>
       <nav className="item-sub-nav">
-        <NavLink to={`/item-list/${item.id}`}>Description</NavLink>
-        <NavLink to={`/item-list/${item.id}/shipping`}>Shipping</NavLink>
+        <NavLink to={`/ItemList/${item.id}`}>Description</NavLink>
+        <NavLink to={`/ItemList/${item.id}/shipping`}>Shipping</NavLink>
       </nav>
+      <Route path="/ItemList/:id" render={() => <Description item={item} />} />
       <Route
-        path="/item-list/:id"
-        render={() => <Description items={item} />}
-      />
-      <Route
-        path="/item-list/:id/shipping"
-        render={() => <Shipping items={item} />}
+        path="/ItemList/:id/shipping"
+        render={() => <Shipping item={item} />}
       />
     </div>
   );
-}
+};
 export default Item;

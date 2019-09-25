@@ -1,0 +1,24 @@
+// const [product, setProduct] = useState();
+// // const [note, setNote ] = useState({})
+// // const contactUs = note => {
+// //   const newNote = {
+// //     id: Date.now(),
+// //     title: note.title,
+// //     body: note.body
+// //   }
+// //   setNote([...notes, newNote])
+// // }
+// import ItemsList from "./ItemsList";
+// import Item from "./Item";
+// import data from "./data";
+
+// {
+//   /* <Route
+//           path="/components/ItemList"
+//           render={props => <ItemsList {...props} items={product} />}
+//         />
+//         <Route
+//           path="/components/Item"
+//           render={props => <Item {...props} items={product} />}
+//         /> */
+// }
