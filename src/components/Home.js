@@ -1,26 +1,31 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-// import coverphoto from "../photog/coverphoto.jpg";
+import IMG9565 from "../images/IMG-9565.jpg";
+import IMG9573 from "../images/IMG-9573.JPG";
+import IMG9582 from "../images/IMG-9582.jpg";
 
 function Home() {
-  //props
-  // const routeToShop = event => {
-  //   event.preventDefault();
-  //   props.history.push("/item-list");
-  // };
   return (
+    /*big div*/
     <div
       id="carouselExampleSlidesOnly"
-      class="carousel slide"
+      className="carousel slide"
       data-ride="carousel"
     >
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="..." alt="First slide"></img>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Second slide"></img>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="..." alt="Third slide"></img>
+      <div className="carousel-inner">
+        <div className="carousel-item active">
+          <img className="d-block w-25" src={IMG9565} alt="First slide"></img>
+          <div className="carousel-item">
+            <img
+              className="d-block w-25"
+              src={IMG9573}
+              alt="Second slide"
+            ></img>
+            <div className="carousel-item">
+              <img
+                className="d-block w-25"
+                src={IMG9582}
+                alt="Third slide"
+              ></img>
             </div>
           </div>
         </div>
@@ -30,24 +35,3 @@ function Home() {
 }
 
 export default Home;
-
-// {/* //  <div className="home-wrapper">
-// //       <div className="login-header">
-// //         <div className="Options">
-// //           <div className="Option">
-// //             <Link to="/SignIn">
-// //               <button type="Submit">Sign In</button>
-// //             </Link>
-// //             <Link to="/SignUp">
-// //               <button type="Submit">Sign Up</button>
-// //             </Link>
-// //             <Link to="/item-list">
-// //               <button onClick={routeToShop} className="md-button shop-button">
-// //                 Shop now!
-// //               </button>
-// //             </Link>
-// //           </div>
-// //           {/* <img className="home-image" src={coverphoto} alt="" /> */}
-// {/* //         </div>
-// //       </div>
-// //     </div> */} */}

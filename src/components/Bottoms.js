@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 
-class Bottoms extends Component {
-  render() {
-    return (
+const Bottoms = props => {
+  // const [bottoms] = useState(data.shirts);
+  return (
+    <div>
+      <h2>Tops</h2>
       <div>
-        <h2>Bottoms</h2>
+        <img src="" />
+        <h3>{props.name}</h3>
+        <h3>{props.price}</h3>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Bottoms;

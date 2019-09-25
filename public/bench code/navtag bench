@@ -117,3 +117,38 @@
 
 //  export default NavTag; */
 // }
+
+
+ // <nav className='nav-wrapper grey darken-3'>
+    //   <div className="container">
+    //     <Link to='/' className="brand-logo">MarioPlan</Link>
+    //   </div>
+    // </nav>
+    //     <div>
+    //       <Navbar>
+    //         <Navbar.Header>
+    //           <Navbar.Brand>
+    //             <a href="#home">React-Bootstrap</a>
+    //           </Navbar.Brand>
+    //         </Navbar.Header>
+    //         <Nav>
+    //           <NavItem eventKey={1} href="#">
+    //             Link
+    //           </NavItem>
+    //           <NavItem eventKey={2} href="#">
+    //             Link
+    //           </NavItem>
+    //           <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+    //             <NavDropdown.Item eventKey={3.1}>Action</NavDropdown.Item>
+    //             <NavDropdown.Item eventKey={3.2}>Another action</NavDropdown.Item>
+    //             <NavDropdown.Item eventKey={3.3}>
+    //               Something else here
+    //             </NavDropdown.Item>
+    //             <NavDropdown.Item divider />
+    //             <NavDropdown.Item eventKey={3.4}>Separated link</NavDropdown.Item>
+    //           </NavDropdown>
+    //         </Nav>
+    //       </Navbar>
+    //     </div>
+    //   );
+    // };
