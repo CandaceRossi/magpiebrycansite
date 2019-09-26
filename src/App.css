@@ -199,3 +199,8 @@ h2 {
 .option {
     margin: auto;
 }
+
+.carousel {
+    width: 320vw;
+    height: 30vh;
+}
