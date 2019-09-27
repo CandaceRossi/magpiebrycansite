@@ -7,29 +7,18 @@ import IMG9582 from "../images/IMG-9582.jpg";
 function Home() {
   return (
     /*big div*/
+
     <Container>
-      <Carousel bsPrefix="carousel">
+      <Carousel>
         <Carousel.Item>
-          <img
-            className="d-block"
-            width={90}
-            height={90}
-            src={IMG9565}
-            alt="First slide"
-          />
+          <img className="d-block w-100 h-50" src={IMG9565} alt="First slide" />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>Diamonds are Forever</h3>
+            <p>Mall Slushies</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img
-            className="d-block"
-            width={90}
-            height={90}
-            src={IMG9582}
-            alt="Third slide"
-          />
+          <img className="d-block w-100 h-50" src={IMG9582} alt="Third slide" />
 
           <Carousel.Caption>
             <h3>Snoop Dogg</h3>
@@ -37,19 +26,11 @@ function Home() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img
-            className="d-block"
-            width={90}
-            height={90}
-            src={IMG9573}
-            alt="Third slide"
-          />
+          <img className="d-block w-100 h-50" src={IMG9573} alt="Third slide" />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            <h3>Jambo Hola</h3>
+            <p>Past Present Future</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

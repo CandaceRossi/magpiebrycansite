@@ -18,7 +18,7 @@ const AddToEmailList = props => {
     setEmail({ email: "" });
   };
   return (
-    <>
+    <div className="email-style">
       <form onSubmit={submitForm}>
         <label htmlFor="email">Add To Email List</label>
         <input
@@ -29,9 +29,11 @@ const AddToEmailList = props => {
           onChange={handleChanges}
           value={email.email}
         />
-        <button type="submit">Add Email</button>
+        <button className="md-button shop-button" type="submit">
+          Add Email
+        </button>
       </form>
-    </>
+    </div>
   );
 };
 export default AddToEmailList;

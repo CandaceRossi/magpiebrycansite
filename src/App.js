@@ -4,15 +4,17 @@ import NavTagg from "./components/Navtagg";
 import ItemList from "./components/ItemList";
 import Item from "./components/Item";
 import data from "./data";
+import AddToEmailList from "./components/AddToEmailList";
 
 const App = () => {
   const [product] = useState(data);
   return (
     <div className="App">
-      <h1 className="store-header">Magpie Designs</h1>
-      <div className="component-links">
+      <div className="component-list">
         <NavTagg />
+        <AddToEmailList />
       </div>
+
       <Route
         exact
         path="/ItemList"

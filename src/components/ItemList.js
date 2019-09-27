@@ -14,9 +14,11 @@ const ItemList = props => {
                 src={item.imageUrl}
                 alt={item.name}
               />
-              <p>{item.name}</p>
             </Link>
+
+            <p>{item.name}</p>
             <p>${item.price}</p>
+            <button className="md-button shop-button">Add To Cart</button>
           </div>
         );
       })}

@@ -21,10 +21,16 @@ const Item = props => {
         </div>
       </div>
       <nav className="item-sub-nav">
-        <NavLink to={`/ItemList/${item.id}`}>Description</NavLink>
+        <NavLink exact to={`/ItemList/${item.id}`}>
+          Description
+        </NavLink>
         <NavLink to={`/ItemList/${item.id}/shipping`}>Shipping</NavLink>
       </nav>
-      <Route path="/ItemList/:id" render={() => <Description item={item} />} />
+      <Route
+        exact
+        path="/ItemList/:id"
+        render={() => <Description item={item} />}
+      />
       <Route
         path="/ItemList/:id/shipping"
         render={() => <Shipping item={item} />}

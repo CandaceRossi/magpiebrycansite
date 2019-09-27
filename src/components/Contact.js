@@ -6,7 +6,7 @@ const Contact = props => {
     firstName: "",
     lastName: "",
     email: "",
-    birthday: ""
+    text: ""
   });
 
   const handleChanges = e => {
@@ -16,13 +16,13 @@ const Contact = props => {
   const submitForm = e => {
     e.preventDefault();
     props.addNewContact(contact);
-    setContact({ firstName: "", lastName: "", email: "", birthday: "" });
+    setContact({ firstName: "", lastName: "", email: "", text: "" });
   };
 
   return (
     <div className="component-style">
-      <h2>Contact Us</h2>
-      <form className="contact-design" onSubmit={submitForm}>
+      <h3 className="header-style">Contact Us</h3>
+      <form className="sign-design" onSubmit={submitForm}>
         <label htmlFor="firstName">first name</label>
         <input
           className="input"
@@ -50,17 +50,17 @@ const Contact = props => {
           onChange={handleChanges}
           value={contact.email}
         />
-        <label htmlFor="birthday">birthday</label>
-        <input
+        <label htmlFor="text">text</label>
+        <textarea
           className="input"
-          id="birthday"
+          id="textarea"
           type="text"
-          name="birthday"
+          name="text"
           onChange={handleChanges}
-          value={contact.birthday}
+          value={contact.text}
         />
-        <button className="button-style" type="submit">
-          sign up
+        <button className="md-button shop-button" type="submit">
+          Send
         </button>
       </form>
     </div>

@@ -4,7 +4,7 @@ const Bottoms = props => {
   // const [bottoms] = useState(data.shirts);
   return (
     <div>
-      <h2>Tops</h2>
+      <h2>Bottoms</h2>
       <div>
         <img src="" />
         <h3>{props.name}</h3>

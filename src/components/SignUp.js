@@ -21,7 +21,7 @@ const SignUp = props => {
 
   return (
     <div className="component-style">
-      <h2>Sign Up</h2>
+      <h3 className="header-style">Sign Up</h3>
       <form className="sign-design" onSubmit={submitForm}>
         <label htmlFor="firstName">first name</label>
         <input
@@ -59,7 +59,7 @@ const SignUp = props => {
           onChange={handleChanges}
           value={signUp.birthday}
         />
-        <button className="button-style" type="submit">
+        <button className="md-button shop-button" type="submit">
           sign up
         </button>
       </form>
