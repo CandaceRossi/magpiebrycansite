@@ -1,72 +1,126 @@
+body {
+    width: 100vw;
+    background: bisque;
+}
+
 .App {
     font-family: sans-serif;
     text-align: center;
     height: 100%;
-    width: 100%;
-    background: bisque;
-}
-
-
-/* nav {
-    margin: auto;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    box-sizing: border-box;
-} */
-
-body {
-    font-family: sans-serif;
-    text-align: center;
-    width: 100vw;
-    background: bisque;
-    height: 100vh;
-}
-
-div.nav {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    width: 100%;
-    display: flex;
-    padding: 20px;
-    margin: 0px;
-    height: 100px;
-}
-
-.navbar {
-    background: #3fc7a9;
+    margin: 0 auto;
 }
 
 .component-list {
-    margin: 100px auto;
-    display: inline-block;
+    margin: 0 auto;
+}
+
+.navtagg-style {
+    margin: 0 auto;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    background: bisque;
+    opacity: 0.9;
+    height: 150px;
+    padding: 0px 15px;
+}
+
+
+/* div.nav {
+    border: 1px solid red;
+    width: 100%;
+    height: 45px;
+} */
+
+.bavnar {
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    z-index: -70px;
+    top: -50px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-size: .85rem;
+    /* color: rgb(147, 166, 185); */
+}
+
+.midnav {
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    z-index: -70px;
+    top: -70px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-size: .85rem;
+    /* color: rgb(147, 166, 185); */
+}
+
+.lastnav {
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    z-index: -70px;
+    top: -97px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-size: .85rem;
+    /* color: rgb(147, 166, 185); */
+}
+
+.carousel-control-next-icon {
+    visibility: hidden;
+}
+
+.carousel-control-prev-icon {
+    visibility: hidden;
 }
 
 .component-style {
-    padding: 20px;
-    width: 550px;
-    margin: 300px auto;
-    border: 1px solid rgb(34, 15, 78);
-    border-radius: 7px;
-    background: rgb(34, 15, 78);
+    margin: 150px auto;
+}
+
+.component-style-contact {
+    margin: 150px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .header-style {
-    color: white
+    color: slategray;
+    text-align: left;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.header-style-second {
+    font-family: cursive;
+    color: slategray;
+    text-align: left;
+}
+
+.balance-contact {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sign-design {
     display: flex;
     flex-direction: column;
     text-align: left;
-    color: white;
+    color: slategray;
 }
 
-.sign-design input {
-    width: 300px
+.sign-design textarea {
+    width: 300px;
+}
+
+.hidden-labels {
+    display: none;
 }
 
 .sign-design button {
@@ -75,9 +129,9 @@ div.nav {
 }
 
 .email-style {
-    border: 1px solid rgb(34, 15, 78);
-    color: white;
-    background: rgb(34, 15, 78);
+    border: 1px solid #2b8eb6;
+    color: slategray;
+    background: bisque;
     border-radius: 7px;
     width: 550px;
     padding: 10px;
@@ -86,6 +140,18 @@ div.nav {
 
 .email-style input {
     margin: 10px;
+}
+
+.input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #2b8eb6;
+    margin: 7px 75px;
+}
+
+.contact-side-photo {
+    width: 315px;
+    height: 450px;
 }
 
 .items-list-wrapper {
@@ -105,12 +171,12 @@ div.nav {
 .item-card p {
     margin: 0 0 4px;
     text-align: left;
-    color: #595959;
+    color: slategray;
 }
 
 .item-list-image {
     width: 100%;
-    transition: transform .5s ease;
+    transition: transform 0.5s ease;
     border: 1px solid lightgray;
     border-radius: 7px;
     overflow: hidden;
@@ -131,7 +197,7 @@ div.nav {
 
 .item-header h2,
 .item-header h4 {
-    color: #1c5d76;
+    color: #2b8eb6;
     margin: 0;
 }
 

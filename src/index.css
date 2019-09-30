@@ -28,7 +28,8 @@
         }
         
         .navbar {
-            background: #3fc7a9;
+            background: bisque;
+            opacity: .25%;
         }
         
         .component-list {
@@ -40,20 +41,20 @@
             padding: 20px;
             width: 550px;
             margin: 0 auto;
-            border: 1px solid rgb(34, 15, 78);
+            border: 1px solid rgb(35, 84, 131);
             border-radius: 7px;
-            background: rgb(34, 15, 78);
+            background: bisque;
         }
         
         .header-style {
-            color: white
+            color: slategray
         }
         
         .sign-design {
             display: flex;
             flex-direction: column;
             text-align: left;
-            color: white;
+            color: slategray;
         }
         
         .sign-design input {
@@ -66,9 +67,9 @@
         }
         
         .email-style {
-            border: 1px solid rgb(34, 15, 78);
-            color: white;
-            background: rgb(34, 15, 78);
+            border: 1px solid rgb(35, 84, 131);
+            color: slategray;
+            background: bisque;
             border-radius: 7px;
             width: 550px;
             padding: 10px;

@@ -4,7 +4,9 @@ import NavTagg from "./components/Navtagg";
 import ItemList from "./components/ItemList";
 import Item from "./components/Item";
 import data from "./data";
-import AddToEmailList from "./components/AddToEmailList";
+import Home from "./components/Home";
+
+// import AddToEmailList from "./components/AddToEmailList";
 
 const App = () => {
   const [product] = useState(data);
@@ -12,19 +14,18 @@ const App = () => {
     <div className="App">
       <div className="component-list">
         <NavTagg />
-        <AddToEmailList />
+        <Route
+          exact
+          path="/ItemList"
+          render={props => <ItemList items={product} {...props} />}
+        />
+        <Route
+          exact
+          path="/ItemList/:id"
+          render={props => <Item items={product} {...props} />}
+        />
+        <Route exact path="/" component={Home} />
       </div>
-
-      <Route
-        exact
-        path="/ItemList"
-        render={props => <ItemList items={product} {...props} />}
-      />
-      <Route
-        exact
-        path="/ItemList/:id"
-        render={props => <Item items={product} {...props} />}
-      />
     </div>
   );
 };
