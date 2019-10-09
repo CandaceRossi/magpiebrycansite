@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Route, NavLink } from "react-router-dom";
 import Description from "./Description";
 import Shipping from "./Shipping";
+import ProductContext from "../contexts/ProductContext";
 
 const Item = props => {
-  const item = props.items.find(
-    thing => thing.id === Number(props.match.params.id)
-  );
+  const { items, addItems } = useContext(ProductContext);
+  const item = items.find(thing => thing.id === Number(props.match.params.id));
   console.log("here is the item", item);
 
   return (
@@ -20,6 +20,10 @@ const Item = props => {
           <h4>${item.price}</h4>
         </div>
       </div>
+      <button onClick={() => addItems(item)} className="md-button shop-button">
+        Add Item
+      </button>
+
       <nav className="item-sub-nav">
         <NavLink exact to={`/ItemList/${item.id}`}>
           Description
