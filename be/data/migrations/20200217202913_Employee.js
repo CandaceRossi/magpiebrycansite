@@ -1,6 +1,6 @@
 
 exports.up = function (knex) {
-    return knex.schema.createTable('customer', col => {
+    return knex.schema.createTable('employee', col => {
         col.increments('employee_id');
         col.varchar('last_name', 45)
         col.varchar('first_name', 45)
@@ -32,5 +32,5 @@ exports.up = function (knex) {
 };
 
 exports.down = function (knex) {
-    return knex.schema.dropTableIfExists("Employee");
+    return knex.schema.dropTableIfExists("employee");
 };
