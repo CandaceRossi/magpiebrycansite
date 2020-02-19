@@ -8,19 +8,23 @@ exports.up = function (knex) {
         col.varchar('contact_title', 255)
         col.varchar('address', 255)
             .notNullable()
-        col.varchar('city', 255)
+        col.varchar('city', 45)
             .notNullable()
-        col.varchar('region', 255)
+        col.varchar('region', 45)
             .notNullable()
-        col.varchar('postal_code', 255)
+        col.integer('postal_code')
             .notNullable()
-        col.varchar('', 255)
+        col.varchar('country', 45)
             .notNullable()
+        col.integer('phone')
+            .notNullable()
+        col.integer('fax')
+        col.varchar('notes', 255)
         col.timestamp('create_at').defaultTo(knex.fn.now())
         col.timestamp('updated_at').defaultTo(knex.fn.now())
     })
 };
 
 exports.down = function (knex) {
-
+    return knex.schema.dropTableIfExists("customer");
 };
