@@ -7,6 +7,7 @@ exports.up = function (knex) {
             .notNullable();
         col.varchar('job_title', 45)
             .notNullable()
+        col.varchar('title_of_curtesy', 45)
         col.date('birth_date', 45)
             .notNullable()
         col.date('hire_date', 45)
@@ -17,7 +18,7 @@ exports.up = function (knex) {
             .notNullable()
         col.varchar('region', 45)
             .notNullable()
-        col.integer('postal_code')
+        col.varchar('postal_code', 45)
             .notNullable()
         col.varchar('country', 45)
             .notNullable()

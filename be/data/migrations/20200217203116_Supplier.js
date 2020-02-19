@@ -12,7 +12,7 @@ exports.up = function (knex) {
             .notNullable()
         col.varchar('region', 45)
             .notNullable()
-        col.integer('postal_code')
+        col.varchar('postal_code', 45)
             .notNullable()
         col.varchar('country', 45)
             .notNullable()
