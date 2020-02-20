@@ -1,0 +1,78 @@
+// const [product, setProduct] = useState();
+// // const [note, setNote ] = useState({})
+// // const contactUs = note => {
+// //   const newNote = {
+// //     id: Date.now(),
+// //     title: note.title,
+// //     body: note.body
+// //   }
+// //   setNote([...notes, newNote])
+// // }
+// import ItemsList from "./ItemsList";
+// import Item from "./Item";
+// import data from "./data";
+
+// {
+//   /* <Route
+//           path="/components/ItemList"
+//           render={props => <ItemsList {...props} items={product} />}
+//         />
+//         <Route
+//           path="/components/Item"
+//           render={props => <Item {...props} items={product} />}
+//         /> */
+// }
+
+
+
+<-- candace 9/25/2019 -->
+
+import React, { useState } from "react";
+import NavTagg from "./components/NavTagg";
+
+// import { Route, Switch, Link } from "react-router-dom";
+// import "./App.css";
+// import data from "./data";
+// import SignUp from "./components/SignUp";
+// import SignIn from "./components/SignIn";
+// import AddToEmailList from "./components/AddToEmailList";
+// import ItemList from "./components/ItemList";
+// import Item from "./components/Item";
+
+const App = () => {
+  // const [product] = useState(data);
+  // console.log("maybe a problemo", product);
+  return (
+    <div className="App">
+      <h1 className="store-header">Magpie Designs</h1>
+      <div className="component-links">
+        <NavTagg />
+
+        {/* <Link to="/">Home</Link>
+        <Link to="/ItemList">Shop</Link>
+        <Link to="/SignUp">Sign Up</Link>
+        <Link to="/SignIn">Sign In</Link>
+
+        <AddToEmailList />
+
+        <Switch>
+          <Route exact path="/SignIn" component={SignIn} />
+          <Route exact path="/SignUp" component={SignUp} />
+          <Route exact path="/AddToEmailList" component={AddToEmailList} />
+          <Route
+            exact
+            path="/ItemList"
+            render={props => <ItemList items={product} {...props} />}
+          />
+          <Route
+            exact
+            path="/ItemList/:id"
+            render={props => <Item items={product} {...props} />}
+          />
+        </Switch> */}
+      </div>
+    </div>
+  );
+};
+
+export default App;

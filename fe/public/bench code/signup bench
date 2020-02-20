@@ -1,0 +1,70 @@
+import React, { useState } from "react";
+
+const SignUp = props => {
+  console.log("props", props);
+  const [signUp, setSignUp] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    birthday: ""
+  });
+
+  const handleChanges = e => {
+    setSignUp({ ...signUp, [e.target.name]: e.target.value });
+  };
+
+  const submitForm = e => {
+    e.preventDefault();
+    props.addNewSignUp(signUp);
+    setSignUp({ firstName: "", lastName: "", email: "", birthday: "" });
+  };
+
+  return (
+    <div className="component-style">
+      <h3 className="header-style">Sign Up</h3>
+      <form className="sign-design" onSubmit={submitForm}>
+        <label htmlFor="firstName">first name</label>
+        <input
+          className="input"
+          id="firstName"
+          type="text"
+          name="firstName"
+          onChange={handleChanges}
+          value={signUp.firstName}
+        />
+        <label htmlFor="lastName">last name</label>
+        <input
+          className="input"
+          id="lastName"
+          type="text"
+          name="lastName"
+          onChange={handleChanges}
+          value={signUp.lastName}
+        />
+        <label htmlFor="email">email</label>
+        <input
+          className="input"
+          id="email"
+          type="email"
+          name="email"
+          onChange={handleChanges}
+          value={signUp.email}
+        />
+        <label htmlFor="birthday">birthday</label>
+        <input
+          className="input"
+          id="birthday"
+          type="date"
+          name="birthday"
+          onChange={handleChanges}
+          value={signUp.birthday}
+        />
+        <button className="md-button shop-button" type="submit">
+          Boobs
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default SignUp;

@@ -1,0 +1,154 @@
+ // <div className="navbar navbar-expand-lg navbar-light bg-light">
+      //   <Link to="/Home" className="navbar-brand">
+      //     MagPie
+      //     <button
+      //       className="navbar-toggler"
+      //       type="button"
+      //       data-toggle="collapse"
+      //       data-target="#navbarSupportedContent"
+      //       aria-controls="navbarSupportedContent"
+      //       aria-expanded="false"
+      //       aria-label="Toggle navigation"
+      //     >
+      //       <span className="navbar-toggler-icon"></span>
+      //     </button>
+      //   </Link>
+
+      //   <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      //     <ul className="navbar-nav mr-auto">
+      //       <li className="nav-item active">
+      //         <Link to="/Home" className="nav-link">
+      //           Home<span className="sr-only">(current)</span>
+      //         </Link>
+      //       </li>
+      //       <li className="nav-item">
+      //         <Link to="/Contact" className="nav-link">
+      //           Contact
+      //         </Link>
+      //       </li>
+      //       <li className="nav-item dropdown">
+      //         <Link
+      //           to="/Store"
+      //           className="nav-link dropdown-toggle"
+      //           id="navbarDropdown"
+      //           role="button"
+      //           data-toggle="dropdown"
+      //           aria-haspopup="true"
+      //           aria-expanded="false"
+      //         >
+      //           Shop
+      //         </Link>
+      //         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+      //           <Link exact to="/Shop/Tops" className="dropdown-item">
+      //             Tops
+      //           </Link>
+      //           <Link exact to="/Shop/Bottoms" className="dropdown-item">
+      //             Bottoms
+      //           </Link>
+      //           <div className="dropdown-divider"></div>
+      //           <Link exact to="/Shop/Accessories" className="dropdown-item">
+      //             Accessories
+      //           </Link>
+      //         </div>
+      //       </li>
+      //     </ul>
+      //   </div>
+      //   <Switch>
+      //     <Route exact path="/" component={Home} />
+      //     <Route exact path="/Contact" component={Contact} />
+      //     <Route exact path="/Store" component={Store} />
+      //     <Route exact path="/About" component={About} />
+      //     <Route exact path="/Tops" component={Tops} />
+      //     <Route exact path="/Tops" component={Bottoms} />
+      //     <Route exact path="/Tops" component={Accessories} />
+      //   </Switch>
+      // </div>
+
+
+      // {
+//   /* <nav className="navbar">
+//           <ul className="navbar-nav">
+//             <Link to={"/"} className="nav-link">
+//               Home
+//             </Link>
+
+//             <Link to={"/contact"} className="nav-link">
+//               Contact
+//             </Link>
+
+//             <Link to={"/about"} className="nav-link">
+//               About
+//             </Link>
+//           </ul>
+//         </nav>
+
+//         <Switch>
+//           <Route exact path="/" component={Home} />
+//           <Route path="/contact" component={Contact} />
+//           <Route path="/about" component={About} />
+//         </Switch>
+//       </div>
+//     );
+//   }
+// }
+
+// export default NavTag;
+
+// // function NavTag() {
+//  return (
+//    <div>
+//      <div className="nav-style">
+//        <NavLink className="some-link" to="/">
+//          Home
+//        </NavLink>
+//        <NavLink className="some-link" to="/About/">
+//          About
+//        </NavLink>
+//        <NavLink className="some-link" to="/Contact/">
+//          Contact
+//        </NavLink>
+//        <NavLink className="some-link" to="/Store/">
+//          Store
+//        </NavLink>
+//      </div>
+//    </div>
+//  );
+//  }
+
+//  export default NavTag; */
+// }
+
+
+ // <nav className='nav-wrapper grey darken-3'>
+    //   <div className="container">
+    //     <Link to='/' className="brand-logo">MarioPlan</Link>
+    //   </div>
+    // </nav>
+    //     <div>
+    //       <Navbar>
+    //         <Navbar.Header>
+    //           <Navbar.Brand>
+    //             <a href="#home">React-Bootstrap</a>
+    //           </Navbar.Brand>
+    //         </Navbar.Header>
+    //         <Nav>
+    //           <NavItem eventKey={1} href="#">
+    //             Link
+    //           </NavItem>
+    //           <NavItem eventKey={2} href="#">
+    //             Link
+    //           </NavItem>
+    //           <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+    //             <NavDropdown.Item eventKey={3.1}>Action</NavDropdown.Item>
+    //             <NavDropdown.Item eventKey={3.2}>Another action</NavDropdown.Item>
+    //             <NavDropdown.Item eventKey={3.3}>
+    //               Something else here
+    //             </NavDropdown.Item>
+    //             <NavDropdown.Item divider />
+    //             <NavDropdown.Item eventKey={3.4}>Separated link</NavDropdown.Item>
+    //           </NavDropdown>
+    //         </Nav>
+    //       </Navbar>
+    //     </div>
+    //   );
+    // };
