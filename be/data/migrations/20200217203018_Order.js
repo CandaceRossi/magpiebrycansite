@@ -19,17 +19,17 @@ exports.up = function (knex) {
             .notNullable();
         col.varchar('freight', 255)
         col.varchar('ship_name', 255)
-            .notNullable()
+            .notNullable();
         col.varchar('ship_address', 255)
-            .notNullable()
+            .notNullable();
         col.varchar('ship_city', 45)
-            .notNullable()
+            .notNullable();
         col.varchar('ship_region', 45)
-            .notNullable()
+            .notNullable();
         col.varchar('ship_postal_code', 45)
-            .notNullable()
+            .notNullable();
         col.varchar('ship_country', 45)
-            .notNullable()
+            .notNullable();
         col.timestamp('create_at').defaultTo(knex.fn.now())
         col.timestamp('updated_at').defaultTo(knex.fn.now())
     })
