@@ -7,7 +7,7 @@ import Lastnav from "./components/Lastnav";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Favorites from "./components/Favorites";
-import SignIn from "./components/SignIn";
+import SignIn from "./components/SignUp";
 import Handbags from "./components/Handbags";
 import HomeGoods from "./components/HomeGoods";
 import Jewelry from "./components/Jewelry";
@@ -20,6 +20,7 @@ import ProductContext from "./contexts/ProductContext";
 import CartContext from "./contexts/CartContext";
 import ShoppingCart from "./components/ShoppingCart";
 import Maglogo from "./components/Maglogo";
+
 
 // import AddToEmailList from "./components/AddToEmailList";
 
@@ -76,7 +77,7 @@ const App = () => {
               />
               <Route exact path="/Contact" component={Contact} />
               <Route exact path="/About" component={About} />
-              <Route exact path="/SignIn" component={SignIn} />
+              <Route exact path="/SignUp" component={SignUp} />
               <Route exact path="/Favorites" component={Favorites} />
               <Route exact path="/Jewelry" component={Jewelry} />
               <Route exact path="/Handbags" component={Handbags} />
