@@ -40,8 +40,8 @@ const App = () => {
     <ProductContext.Provider value={{ items, addItem }}>
       <CartContext.Provider value={{ cart, removeItem }}>
         <div className="App">
-          <Maglogo />
           <div className="component-list">
+            <Maglogo />
             <div className="nav-style">
               <Bavnar cart={cart} />
               <Midnav />

@@ -64,7 +64,9 @@
     }
     
     .comp-list-home {
+        width: 100%;
         margin: 0 auto;
+        padding: 0px;
     }
     
     .carousel-control-next-icon {
@@ -75,24 +77,20 @@
         visibility: hidden;
     }
     
-    .component-style {
-        margin: auto;
-    }
-    
-    .component-style-contact {
+    .balance-contact {
         margin: 0 auto;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        box-sizing: border-box;
+        padding: 0px;
     }
     
-    .component-style {
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-sizing: border-box;
+    .balance-contact .Card {
+        width: 20rem;
+        padding: 0px;
+    }
+    
+    .balance-contact img {
+        width: 20rem;
+        padding: 0px;
     }
     
     .header-style {
@@ -108,17 +106,18 @@
     }
     
     .balance-contact {
-        padding: 400px 10px;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
         align-items: center;
     }
-    /* :local(.container) {
-    margin: 40px;
-    border: 5px dashed pink;
-} */
     
+    .sign-up-balance {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    /*     
     .sign-design {
         display: flex;
         justify-content: center;
@@ -131,7 +130,7 @@
     
     .sign-design textarea {
         width: 300px;
-    }
+    } */
     
     .hidden-labels {
         display: none;
@@ -161,11 +160,6 @@
         padding: 10px;
         border: 1px solid #2b8eb6;
         margin: 7px 75px;
-    }
-    
-    .contact-side-photo {
-        width: 315px;
-        height: 450px;
     }
     
     .items-list-wrapper {
