@@ -78,13 +78,14 @@
     }
     
     .balance-contact {
-        margin: 0 auto;
         display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
         padding: 0px;
     }
     
     .balance-contact .Card {
-        width: 20rem;
         padding: 0px;
     }
     
@@ -103,13 +104,6 @@
         font-family: cursive;
         color: slategray;
         text-align: left;
-    }
-    
-    .balance-contact {
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        align-items: center;
     }
     
     .sign-up-balance {

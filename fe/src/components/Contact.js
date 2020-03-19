@@ -24,7 +24,7 @@ const Contact = props => {
 
   return (
     <div className="balance-contact">
-      <Card style={{ width: '20rem' }}>
+      <Card style={{ width: '70rem' }}>
         <img variant="top" width="100%" src="images/9565" alt="Card image cap" />
         {/* <Card.Img variant="top" src=".img-9565.jpg/100px180?text=Image cap" class="img-thumbnail" alt="top" /> */}
         <Card.Body>
@@ -35,6 +35,7 @@ const Contact = props => {
         <ListGroup className="list-group-flush">
           <ListGroupItem>
             <input
+              style={{ width: '20rem', float: "left" }}
               placeholder="Your Name*"
               id="Name"
               type="text"
@@ -45,6 +46,7 @@ const Contact = props => {
           </ListGroupItem>
           <ListGroupItem>
             <input
+              style={{ width: '20rem', float: "left" }}
               placeholder="Your Email*"
               type="email"
               name="email"
@@ -54,6 +56,7 @@ const Contact = props => {
           </ListGroupItem>
           <ListGroupItem>
             <input
+              style={{ width: '20rem', float: "left" }}
               placeholder="Your Phone*"
               type="text"
               name="phone"
@@ -63,9 +66,10 @@ const Contact = props => {
           </ListGroupItem>
           <ListGroupItem>
             <textarea
-              placeholder="Text*"
-              type="text"
-              name="text"
+              style={{ width: '60rem', float: "left" }}
+            placeholder="Text*"
+            type="text"
+            name="text"
               onChange={handleChanges}
               value={contact.text}
             />
@@ -77,8 +81,6 @@ const Contact = props => {
           </button>
         </Card.Body>
       </Card>
-      <img style={{ width: '20rem' }} src={IMG9592} alt="" />
-
     </div>
   );
 };
