@@ -5,7 +5,7 @@ const Midnav = () => {
   return (
     <div className="midnav">
       <Navbar>
-        <Nav.Link href="/SignIn">SignIn</Nav.Link>
+        <Nav.Link href="/SignUp">Sign Up</Nav.Link>
         <Nav.Link href="/Favorites">Favorites</Nav.Link>
         <Nav.Link href="/ItemList">Shopping</Nav.Link>
       </Navbar>

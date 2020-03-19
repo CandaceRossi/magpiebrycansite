@@ -7,7 +7,7 @@ import Lastnav from "./components/Lastnav";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Favorites from "./components/Favorites";
-import SignIn from "./components/SignUp";
+import SignUp from "./components/SignUp";
 import Handbags from "./components/Handbags";
 import HomeGoods from "./components/HomeGoods";
 import Jewelry from "./components/Jewelry";
@@ -40,12 +40,12 @@ const App = () => {
     <ProductContext.Provider value={{ items, addItem }}>
       <CartContext.Provider value={{ cart, removeItem }}>
         <div className="App">
+          <Maglogo />
           <div className="component-list">
             <div className="nav-style">
               <Bavnar cart={cart} />
               <Midnav />
               <Lastnav />
-              <Maglogo />
             </div>
             <Switch>
               <Route exact path="/" component={Home} />

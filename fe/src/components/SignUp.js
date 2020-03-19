@@ -43,7 +43,7 @@ const SignUp = (props) => {
               type="text"
               name="firstName"
               onChange={handleChanges}
-              value={signIn.firstName}
+              value={signUp.firstName}
               placeholder="First Name"
             />
           </ListGroupItem>
@@ -53,7 +53,7 @@ const SignUp = (props) => {
             type="text"
             name="lastName"
             onChange={handleChanges}
-            value={signIn.lastName}
+            value={signUp.lastName}
             placeholder="Last Name"
           />
           </ListGroupItem>
@@ -63,7 +63,7 @@ const SignUp = (props) => {
             type="email"
             name="email"
             onChange={handleChanges}
-            value={signIn.email}
+            value={signUp.email}
             placeholder="Email"
           />
           </ListGroupItem>
@@ -74,7 +74,7 @@ const SignUp = (props) => {
               type="date"
               name="birthday"
               onChange={handleChanges}
-              value={signIn.birthday}
+              value={signUp.birthday}
               placeholder="Birthdate"
             />
           </ListGroupItem>

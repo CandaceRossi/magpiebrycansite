@@ -1,413 +1,422 @@
-body {
-    width: 100vw;
-    height: 100vh;
-    background: bisque;
-}
-
-.App {
-    font-family: sans-serif;
-    text-align: center;
-    height: 100%;
-    margin: 0 auto;
-}
-
-.component-list {
-    margin: 0 auto;
-}
-
-.comp-list-home {
-    display: grid;
-    /* grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 18% auto 30%; */
-}
-
-.nav-style {
-    display: grid;
-    grid-template-columns: 25% 15% 15% auto;
-    grid-template-rows: 18% auto 30%;
-    /* justify-content: center;
-    flex-direction: column;
-    align-items: flex-end; */
-    border: 1px solid red;
-    height: 200px;
-    z-index: 1000;
-    width: 100%;
-    background: bisque;
-    opacity: 0.9;
-    width: 100vw;
-    position: fixed;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-    font-size: 0.85rem;
-}
-
-.maglogo {
-    grid-column-start: 2;
-    grid-row-start: 2;
-    align-self: center;
-    border: 1px solid red;
-    height: 55px;
-}
-
-.bavnar {
-    grid-column-start: 4;
-    padding-bottom: 4px;
-    align-self: center;
-    font-size: 0.79em;
-    height: 54px;
-}
-
-.midnav {
-    grid-column-start: 4;
-    grid-row-end: 3;
-    padding: 20px;
-}
-
-.lastnav {
-    grid-column-start: 4;
-    grid-row-end: 4;
-    padding: 0px;
-}
-
-.carousel-style {
-    padding-top: 175px;
-}
-
-.carousel-control-next-icon {
-    visibility: hidden;
-}
-
-.carousel-control-prev-icon {
-    visibility: hidden;
-}
-
-.component-style {
-    margin: auto;
-}
-
-.component-style-contact {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-.component-style {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-.header-style {
-    color: slategray;
-    text-align: left;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-}
-
-.header-style-second {
-    font-family: cursive;
-    color: slategray;
-    text-align: left;
-}
-
-.balance-contact {
-    padding: 400px 10px;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-/* :local(.container) {
+    body {
+        width: 100vw;
+        height: 100vh;
+        background: bisque;
+    }
+    
+    .App {
+        font-family: sans-serif;
+        text-align: center;
+        height: 100%;
+        margin: 0 auto;
+    }
+    
+    .component-list {
+        margin: 0 auto;
+    }
+    
+    .maglogo {
+        position: absolute;
+        z-index: 75;
+        padding: 15px;
+    }
+    
+    .nav-style {
+        margin: 0 15px;
+        height: 150px;
+        padding: 0px;
+    }
+    
+    .bavnar {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0px;
+        margin: 0 auto;
+    }
+    
+    .bavnar a {
+        padding: 0px 5px;
+        margin: 0px;
+    }
+    
+    .midnav {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0px;
+        margin: 0 auto;
+    }
+    
+    .midnav a {
+        padding: 0px 5px;
+        margin: 0px;
+    }
+    
+    .lastnav {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0px;
+        margin: 0 auto;
+    }
+    
+    .lastnav a {
+        padding: 0px 5px;
+        margin: 0px;
+    }
+    
+    .comp-list-home {
+        margin: 0 auto;
+    }
+    
+    .carousel-control-next-icon {
+        visibility: hidden;
+    }
+    
+    .carousel-control-prev-icon {
+        visibility: hidden;
+    }
+    
+    .component-style {
+        margin: auto;
+    }
+    
+    .component-style-contact {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    
+    .component-style {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    
+    .header-style {
+        color: slategray;
+        text-align: left;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    }
+    
+    .header-style-second {
+        font-family: cursive;
+        color: slategray;
+        text-align: left;
+    }
+    
+    .balance-contact {
+        padding: 400px 10px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* :local(.container) {
     margin: 40px;
     border: 5px dashed pink;
 } */
-
-.sign-design {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    color: slategray;
-    padding-top: 150px;
-}
-
-.sign-design textarea {
-    width: 300px;
-}
-
-.hidden-labels {
-    display: none;
-}
-
-.sign-design button {
-    width: 75px;
-    margin: 15px 0;
-}
-
-.email-style {
-    border: 1px solid #2b8eb6;
-    color: slategray;
-    background: bisque;
-    border-radius: 7px;
-    width: 550px;
-    padding: 10px;
-    margin: 15px 0;
-}
-
-.email-style input {
-    margin: 10px;
-}
-
-.input {
-    width: 300px;
-    padding: 10px;
-    border: 1px solid #2b8eb6;
-    margin: 7px 75px;
-}
-
-.contact-side-photo {
-    width: 315px;
-    height: 450px;
-}
-
-.items-list-wrapper {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 200px;
-}
-
-.items-list-wrapper p {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.item-card {
-    width: 250px;
-    height: 400px;
-    margin: 0 10px 32px;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.item-card-container {
-    width: 250px;
-    height: 250px;
-    overflow: hidden;
-}
-
-.item-card-image {
-    width: 100%;
-    transition: transform 0.5s ease;
-}
-
-.item-card-image:hover {
-    transform: scale(1.1);
-}
-
-.item-card-info {
-    width: 250px;
-    height: 150px;
-}
-
-.item-card p {
-    margin: 0 0 4px;
-    text-align: left;
-    color: slategray;
-    display: flex;
-}
-
-.item-wrapper {
-    margin: auto;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 175px;
-}
-
-.item-header {
-    display: flex;
-}
-
-.item-header h2,
-.item-header h4 {
-    color: #2b8eb6;
-    margin: 0 auto;
-}
-
-.item-header h4 {
-    margin-top: 16px;
-}
-
-.item-sub-nav {
-    padding-top: 25px;
-    border-bottom: 1px solid slategrey;
-    justify-content: center;
-}
-
-.item-sub-nav a {
-    color: #a5a5a5;
-    text-decoration: none;
-    padding: 12px;
-}
-
-.item-sub-nav a.active {
-    color: #1c5d76;
-    font-weight: bold;
-}
-
-.item-sub-nav a:first-of-type {
-    margin-right: 32px;
-}
-
-.item-card a {
-    text-decoration: none;
-}
-
-.image-wrapper {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.item-title-wrapper {
-    width: 50%;
-    height: 25%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    /* flex-flow: column nowrap; */
-}
-
-.item-description {
-    max-width: 720px;
-    margin: 32px auto;
-}
-
-.item-shipping {
-    max-width: 720px;
-    margin: 32px auto;
-}
-
-.md-button {
-    position: relative;
-    display: inline-block;
-    box-sizing: border-box;
-    margin: 0 8px;
-    border: none;
-    border-radius: 2px;
-    padding: 0 16px;
-    min-width: 64px;
-    height: 36px;
-    vertical-align: middle;
-    text-align: center;
-    text-overflow: ellipsis;
-    text-transform: uppercase;
-    color: #fff;
-    background-color: #3f76c7;
-    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-    font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 36px;
-    overflow: hidden;
-    outline: none;
-    cursor: pointer;
-    transition: box-shadow 0.2s;
-}
-
-.md-button:hover,
-.md-button:focus {
-    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-}
-
-.md-button:active {
-    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
-}
-
-.md-button:disabled {
-    color: rgba(0, 0, 0, 0.38);
-    background-color: rgba(0, 0, 0, 0.12);
-    box-shadow: none;
-    cursor: initial;
-}
-
-.md-button::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: currentColor;
-    opacity: 0;
-    transition: opacity 0.2s;
-}
-
-.md-button:hover::before {
-    opacity: 0.12;
-}
-
-.md-button:focus::before {
-    opacity: 0.2;
-}
-
-.md-button:active::before {
-    opacity: 0.32;
-}
-
-.md-button:disabled::before {
-    opacity: 0;
-}
-
-.md-button::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 18px;
-    border-radius: 50%;
-    padding: 50%;
-    width: 32px;
-    height: 32px;
-    background-color: currentColor;
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(1);
-    transition: opacity 1s, transform 0.5s;
-}
-
-.md-button:active::after {
-    opacity: 0.4;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0s;
-}
-
-.md-button:disabled::after {
-    opacity: 0;
-}
-
-.shopping-cart {
-    display: block;
-    margin: 0 auto;
-    width: 1000px;
-    background: white;
-    border-radius: 5px;
-}
-
-.shopping-cart img {
-    width: 100px;
-}
-
-.shopping-cart h1,
-p {
-    padding: 2px 0;
-    margin: 0 20px;
-}
+    
+    .sign-design {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        color: slategray;
+        padding-top: 150px;
+    }
+    
+    .sign-design textarea {
+        width: 300px;
+    }
+    
+    .hidden-labels {
+        display: none;
+    }
+    
+    .sign-design button {
+        width: 75px;
+        margin: 15px 0;
+    }
+    
+    .email-style {
+        border: 1px solid #2b8eb6;
+        color: slategray;
+        background: bisque;
+        border-radius: 7px;
+        width: 550px;
+        padding: 10px;
+        margin: 15px 0;
+    }
+    
+    .email-style input {
+        margin: 10px;
+    }
+    
+    .input {
+        width: 300px;
+        padding: 10px;
+        border: 1px solid #2b8eb6;
+        margin: 7px 75px;
+    }
+    
+    .contact-side-photo {
+        width: 315px;
+        height: 450px;
+    }
+    
+    .items-list-wrapper {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 200px;
+    }
+    
+    .items-list-wrapper p {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .item-card {
+        width: 250px;
+        height: 400px;
+        margin: 0 10px 32px;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    
+    .item-card-container {
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+    }
+    
+    .item-card-image {
+        width: 100%;
+        transition: transform 0.5s ease;
+    }
+    
+    .item-card-image:hover {
+        transform: scale(1.1);
+    }
+    
+    .item-card-info {
+        width: 250px;
+        height: 150px;
+    }
+    
+    .item-card p {
+        margin: 0 0 4px;
+        text-align: left;
+        color: slategray;
+        display: flex;
+    }
+    
+    .item-wrapper {
+        margin: auto;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 175px;
+    }
+    
+    .item-header {
+        display: flex;
+    }
+    
+    .item-header h2,
+    .item-header h4 {
+        color: #2b8eb6;
+        margin: 0 auto;
+    }
+    
+    .item-header h4 {
+        margin-top: 16px;
+    }
+    
+    .item-sub-nav {
+        padding-top: 25px;
+        border-bottom: 1px solid slategrey;
+        justify-content: center;
+    }
+    
+    .item-sub-nav a {
+        color: #a5a5a5;
+        text-decoration: none;
+        padding: 12px;
+    }
+    
+    .item-sub-nav a.active {
+        color: #1c5d76;
+        font-weight: bold;
+    }
+    
+    .item-sub-nav a:first-of-type {
+        margin-right: 32px;
+    }
+    
+    .item-card a {
+        text-decoration: none;
+    }
+    
+    .image-wrapper {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+    
+    .item-title-wrapper {
+        width: 50%;
+        height: 25%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        /* flex-flow: column nowrap; */
+    }
+    
+    .item-description {
+        max-width: 720px;
+        margin: 32px auto;
+    }
+    
+    .item-shipping {
+        max-width: 720px;
+        margin: 32px auto;
+    }
+    
+    .md-button {
+        position: relative;
+        display: inline-block;
+        box-sizing: border-box;
+        margin: 0 8px;
+        border: none;
+        border-radius: 2px;
+        padding: 0 16px;
+        min-width: 64px;
+        height: 36px;
+        vertical-align: middle;
+        text-align: center;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #3f76c7;
+        box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+        font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 36px;
+        overflow: hidden;
+        outline: none;
+        cursor: pointer;
+        transition: box-shadow 0.2s;
+    }
+    
+    .md-button:hover,
+    .md-button:focus {
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    }
+    
+    .md-button:active {
+        box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    }
+    
+    .md-button:disabled {
+        color: rgba(0, 0, 0, 0.38);
+        background-color: rgba(0, 0, 0, 0.12);
+        box-shadow: none;
+        cursor: initial;
+    }
+    
+    .md-button::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: currentColor;
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+    
+    .md-button:hover::before {
+        opacity: 0.12;
+    }
+    
+    .md-button:focus::before {
+        opacity: 0.2;
+    }
+    
+    .md-button:active::before {
+        opacity: 0.32;
+    }
+    
+    .md-button:disabled::before {
+        opacity: 0;
+    }
+    
+    .md-button::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 18px;
+        border-radius: 50%;
+        padding: 50%;
+        width: 32px;
+        height: 32px;
+        background-color: currentColor;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1);
+        transition: opacity 1s, transform 0.5s;
+    }
+    
+    .md-button:active::after {
+        opacity: 0.4;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0s;
+    }
+    
+    .md-button:disabled::after {
+        opacity: 0;
+    }
+    
+    .shopping-cart {
+        display: block;
+        margin: 0 auto;
+        width: 1000px;
+        background: white;
+        border-radius: 5px;
+    }
+    
+    .shopping-cart img {
+        width: 100px;
+    }
+    
+    .shopping-cart h1,
+    p {
+        padding: 2px 0;
+        margin: 0 20px;
+    }
+    /* 
+border: 1px solid red;
+height: 200px;
+z-index: 1000;
+width: 100%;
+background: bisque;
+opacity: 0.9;
+width: 100vw;
+position: fixed;
+font-family: "Trebuchet MS",
+"Lucida Sans Unicode",
+"Lucida Grande",
+"Lucida Sans",
+Arial,
+sans-serif;
+font-size: 0.85rem; */
