@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import ProductContext from "../contexts/ProductContext";
-import Item from "./Item";
+// import Item from "./Item";
 
-const ItemList = props => {
+const ItemList = () => {
   const { items, addItem } = useContext(ProductContext);
   console.log("here are the products", items);
   return (

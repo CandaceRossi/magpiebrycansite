@@ -3,9 +3,9 @@ import React, { Component } from "react";
 class About extends Component {
   render() {
     return (
-      <div className="component-style">
-        <h3 className="header-style">About</h3>
-        <div className="sign-design">
+      <div className="sign-design">
+        <div class="sidebar-box">
+          <h3 className="header-style">About</h3>
           <p>
             Magpie Designs is a family workshed and creative outsource for
             impactful designs seen all over the world.
@@ -36,6 +36,7 @@ class About extends Component {
             which offer a story of its historical liniage, to be remembered and
             celebrated. to the designs
           </p>
+          <p class="read-more"><a href="#" class="button">Read More</a></p>
         </div>
       </div>
     );
