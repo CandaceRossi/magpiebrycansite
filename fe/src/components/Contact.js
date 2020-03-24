@@ -24,7 +24,7 @@ const Contact = props => {
 
   return (
     <div className="balance-contact">
-      <Card style={{ width: '70rem' }}>
+      <Card style={{ width: '60rem' }}>
         <img variant="top" width="100%" src="images/9565" alt="Card image cap" />
         {/* <Card.Img variant="top" src=".img-9565.jpg/100px180?text=Image cap" class="img-thumbnail" alt="top" /> */}
         <Card.Body>
@@ -66,7 +66,7 @@ const Contact = props => {
           </ListGroupItem>
           <ListGroupItem>
             <textarea
-              style={{ width: '60rem', float: "left" }}
+              style={{ width: '50rem', float: "left" }}
             placeholder="Text*"
             type="text"
             name="text"

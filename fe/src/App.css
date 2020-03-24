@@ -84,11 +84,18 @@
         width: 100%;
         margin: 0 auto;
         padding: 0px;
+        opacity: 0.7;
     }
     
     .balance-contact .Card {
         padding: 0px;
+        background: hsla(0, 0%, 95%, 0.965);
+        font-weight: bold;
+        border-radius: 5px;
     }
+    /* .balance-contact .Card .Text {
+        font-weight: bold;
+    } */
     
     .balance-contact img {
         width: 20rem;
@@ -117,7 +124,7 @@
     } */
     
     .sidebar-box {
-        width: 450px;
+        width: 550px;
         max-height: 400px;
         position: relative;
         overflow: hidden;
@@ -131,7 +138,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 450px;
+        width: 550px;
         text-align: center;
         margin: 0 auto;
         padding: 30px 0;
