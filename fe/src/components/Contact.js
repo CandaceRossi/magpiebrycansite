@@ -24,18 +24,19 @@ const Contact = props => {
 
   return (
     <div className="balance-contact">
-      <Card style={{ width: '60rem' }}>
-        <img variant="top" width="100%" src="images/9565" alt="Card image cap" />
+      <Card style={{ width: '25rem', border: 'none' }}>
+        {/* <img variant="top" width="100%" src="images/9565" alt="Card image cap" /> */}
         {/* <Card.Img variant="top" src=".img-9565.jpg/100px180?text=Image cap" class="img-thumbnail" alt="top" /> */}
         <Card.Body>
           <Card.Title>Have Questions?</Card.Title>
           <Card.Text> For More Info</Card.Text>
           <Card.Text> Contact Us</Card.Text>
+          <Card.Text>Email</Card.Text>
         </Card.Body>
-        <ListGroup className="list-group-flush">
+        <ListGroup>
           <ListGroupItem>
             <input
-              style={{ width: '20rem', float: "left" }}
+              style={{ width: '18rem', height: '3rem', float: "left" }}
               placeholder="Your Name*"
               id="Name"
               type="text"
@@ -46,7 +47,7 @@ const Contact = props => {
           </ListGroupItem>
           <ListGroupItem>
             <input
-              style={{ width: '20rem', float: "left" }}
+              style={{ width: '18rem', height: '3rem', float: "left" }}
               placeholder="Your Email*"
               type="email"
               name="email"
@@ -56,7 +57,7 @@ const Contact = props => {
           </ListGroupItem>
           <ListGroupItem>
             <input
-              style={{ width: '20rem', float: "left" }}
+              style={{ width: '18rem', height: '3rem', float: "left" }}
               placeholder="Your Phone*"
               type="text"
               name="phone"
@@ -66,17 +67,17 @@ const Contact = props => {
           </ListGroupItem>
           <ListGroupItem>
             <textarea
-              style={{ width: '50rem', float: "left" }}
-            placeholder="Text*"
-            type="text"
-            name="text"
+              style={{ width: '18rem', height: '3rem', float: "left" }}
+              placeholder="Text*"
+              type="text"
+              name="text"
               onChange={handleChanges}
               value={contact.text}
             />
           </ListGroupItem>
         </ListGroup>
         <Card.Body>
-          <button className="md-button shop-button" type="submit" onSubmit={submitForm}>
+          <button className="md-button shop-button contact-button" type="submit" onSubmit={submitForm}>
             Send
           </button>
         </Card.Body>

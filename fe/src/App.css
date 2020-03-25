@@ -111,28 +111,42 @@
     }
     
     .balance-contact {
-        display: flex;
-        justify-content: center;
         width: 100%;
         margin: 0 auto;
         padding: 0px;
         opacity: 0.7;
+        padding: 20px;
     }
     
     .balance-contact .Card {
         padding: 0px;
-        background: hsla(0, 0%, 95%, 0.965);
         font-weight: bold;
-        border-radius: 5px;
     }
-    /* .balance-contact .Card .Text {
-        font-weight: bold;
-    } */
     
-    .balance-contact img {
+    .balance-contact .card-body {
+        background: #DED1BD;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .balance-contact .card-title {
+        font-family: "Comic Sans MS", cursive, sans-serif;
+    }
+    
+    .list-group-item {
+        background: #DED1BD;
+        border: none;
+    }
+    
+    .contact-button {
+        float: left;
+        padding: none;
+    }
+    /* .balance-contact-img {
         width: 20rem;
         padding: 0px;
-    }
+    } */
     
     .sign-design {
         margin: 0 auto;

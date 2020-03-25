@@ -29,7 +29,7 @@ const Carouselcomp = () => {
           <img src={IMG9573} alt="Third slide" />
 
           <Carousel.Caption>
-            <h3>Jambo Hola</h3>
+            <h3>Creatures</h3>
             <p>Past Present Future</p>
           </Carousel.Caption>
         </Carousel.Item>
