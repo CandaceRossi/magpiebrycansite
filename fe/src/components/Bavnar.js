@@ -11,7 +11,7 @@ const Bavnar = () => {
         <Nav.Link href="/Contact">CONTACT</Nav.Link>
         <Nav.Link href="/About">ABOUT</Nav.Link>
         <Nav.Link href="/ShoppingCart">
-          SHOPPING CART <span>{cart.length}</span>
+          <i class="fas fa-shopping-cart"></i> SHOPPING CART <span>{cart.length}</span>
         </Nav.Link>
       </Navbar>
     </div>
