@@ -22,6 +22,7 @@ import CartContext from "./contexts/CartContext";
 import ShoppingCart from "./components/ShoppingCart";
 import Maglogo from "./components/Maglogo";
 import Slideshow from "./components/Slideshow";
+import BottomPage from "./components/BottomPage";
 
 
 // import AddToEmailList from "./components/AddToEmailList";
@@ -90,6 +91,7 @@ const App = () => {
               <Route exact path="/Apparel" component={Apparel} />
             </Switch>
             <Slideshow />
+            <BottomPage />
           </div>
         </div>
 

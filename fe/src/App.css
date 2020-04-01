@@ -64,6 +64,7 @@
         color: #683B2B;
         /* text-shadow: 1px 1px darkslategrey; */
         font-weight: bold;
+        font-style: italic;
         padding: 0px 15px;
         margin: 0px;
         border-right: 1px solid #D49E8D;
@@ -496,6 +497,16 @@
         margin: 0 20px;
     }
     
+    .slideshow {
+        width: 100%;
+        height: 275px;
+        padding: none;
+    }
+    
+    .page {
+        padding: none;
+    }
+    
     .cards-slider-wrapper {
         display: flex;
         position: absolute;
@@ -539,4 +550,47 @@
     
     .cards-slider img:hover {
         transform: scale(1.1);
+    }
+    
+    .below {
+        width: 100%;
+        display: flex;
+    }
+    
+    .bottom-page {
+        width: 100%;
+        /* height: 250px; */
+        margin: 0 auto;
+        padding: 50px 250px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .bottom-grid {
+        width: 350px;
+        margin: 0 auto;
+        padding: none;
+    }
+    
+    .bottom-grid p {
+        margin: 0 auto;
+        padding-bottom: 20px;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-style: italic;
+        font-size: 1.2rem;
+        color: #2b2b28;
+    }
+    
+    .bottom-grid a {
+        margin: 0 auto;
+        padding: 0px 20px;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-size: 1rem;
+        color: #683B2B !important;
+    }
+    
+    .bottom-grid a:hover {
+        border-bottom: solid 3px rgb(231, 172, 154);
+        cursor: pointer;
     }

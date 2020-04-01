@@ -26,7 +26,7 @@ class Slideshow extends Component {
     render() {
         const { properties, property } = this.state;
         return (
-            <div className="Slideshow">
+            <div className="slideshow">
                 <button onClick={() => this.prevProperty()} disabled={property.index === 0}>Prev</button>
                 <button onClick={() => this.nextProperty()} disabled={property.index === data.properties.length - 1}>Next</button>
                 <div className="page">
