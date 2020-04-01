@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 
+
 import Bavnar from "./components/Bavnar";
 import Midnav from "./components/Midnav";
 import Lastnav from "./components/Lastnav";
@@ -20,6 +21,7 @@ import ProductContext from "./contexts/ProductContext";
 import CartContext from "./contexts/CartContext";
 import ShoppingCart from "./components/ShoppingCart";
 import Maglogo from "./components/Maglogo";
+import Slideshow from "./components/Slideshow";
 
 
 // import AddToEmailList from "./components/AddToEmailList";
@@ -40,13 +42,16 @@ const App = () => {
     <ProductContext.Provider value={{ items, addItem }}>
       <CartContext.Provider value={{ cart, removeItem }}>
         <div className="App">
+
           <div className="component-list">
             <Maglogo />
+
             <div className="nav-style">
               <Bavnar cart={cart} />
               <Midnav />
               <Lastnav />
             </div>
+
             <Switch>
               <Route exact path="/" component={Home} />
               <Route
@@ -84,8 +89,10 @@ const App = () => {
               <Route exact path="/HomeGoods" component={HomeGoods} />
               <Route exact path="/Apparel" component={Apparel} />
             </Switch>
+            <Slideshow />
           </div>
         </div>
+
       </CartContext.Provider>
     </ProductContext.Provider>
   );
