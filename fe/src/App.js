@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 
+
 import Bavnar from "./components/Bavnar";
 import Midnav from "./components/Midnav";
 import Lastnav from "./components/Lastnav";
@@ -20,6 +21,7 @@ import ProductContext from "./contexts/ProductContext";
 import CartContext from "./contexts/CartContext";
 import ShoppingCart from "./components/ShoppingCart";
 import Maglogo from "./components/Maglogo";
+import Slideshow from "./components/Slideshow";
 
 
 // import AddToEmailList from "./components/AddToEmailList";
@@ -40,66 +42,59 @@ const App = () => {
     <ProductContext.Provider value={{ items, addItem }}>
       <CartContext.Provider value={{ cart, removeItem }}>
         <div className="App">
+
           <div className="component-list">
             <Maglogo />
+
             <div className="nav-style">
               <Bavnar cart={cart} />
               <Midnav />
               <Lastnav />
-              <div class="container"><div class="row">
-                <div class="col-xs-12">
-                  <div id="imageCarousel" class="corousel slide" data-interval="2000" data-ride="carousel" data-pause="hover" data-wrap="true">
-                    <ol class="carousel-indicators">
-                      <li data-target="#imageCarousel" data-slide-to"0" class="active"></li>
-                    <li data-target="#imageCarousel" data-slide-to"1" class="active"></li>
-                  <li data-target="#imageCarousel" data-slide-to"2" class="active"></li>
-                <li data-target="#imageCarousel" data-slide-to"3" class="active"></li>
-                
- </ol> </div>
-          </div></div>
-
             </div>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route
-          exact
-          path="/ItemList"
-          render={props => (
-            <ItemList items={items} {...props} addItem={addItem} />
-          )}
-        />
-        <Route
-          exact
-          path="/ItemList/:id"
-          render={props => (
-            <Item items={items} {...props} addItem={addItem} />
-          )}
-        />
-        <Route
-          path="/ShoppingCart"
-          render={props => (
-            <ShoppingCart
-              cart={cart}
-              items={items}
-              {...props}
-              setCart={setCart}
-              removeItem={removeItem}
-            />
-          )}
-        />
-        <Route exact path="/Contact" component={Contact} />
-        <Route exact path="/About" component={About} />
-        <Route exact path="/SignUp" component={SignUp} />
-        <Route exact path="/Favorites" component={Favorites} />
-        <Route exact path="/Jewelry" component={Jewelry} />
-        <Route exact path="/Handbags" component={Handbags} />
-        <Route exact path="/HomeGoods" component={HomeGoods} />
-        <Route exact path="/Apparel" component={Apparel} />
-      </Switch>
+
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route
+                exact
+                path="/ItemList"
+                render={props => (
+                  <ItemList items={items} {...props} addItem={addItem} />
+                )}
+              />
+              <Route
+                exact
+                path="/ItemList/:id"
+                render={props => (
+                  <Item items={items} {...props} addItem={addItem} />
+                )}
+              />
+              <Route
+                path="/ShoppingCart"
+                render={props => (
+                  <ShoppingCart
+                    cart={cart}
+                    items={items}
+                    {...props}
+                    setCart={setCart}
+                    removeItem={removeItem}
+                  />
+                )}
+              />
+              <Route exact path="/Contact" component={Contact} />
+              <Route exact path="/About" component={About} />
+              <Route exact path="/SignUp" component={SignUp} />
+              <Route exact path="/Favorites" component={Favorites} />
+              <Route exact path="/Jewelry" component={Jewelry} />
+              <Route exact path="/Handbags" component={Handbags} />
+              <Route exact path="/HomeGoods" component={HomeGoods} />
+              <Route exact path="/Apparel" component={Apparel} />
+            </Switch>
+            <Slideshow />
           </div>
-        </div >
-      </CartContext.Provider >
-    </ProductContext.Provider >
+        </div>
+
+      </CartContext.Provider>
+    </ProductContext.Provider>
   );
 };
 
