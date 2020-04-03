@@ -6,17 +6,17 @@ const BottomPage = () => {
     return (
         <div>
             <div className="bottom-page">
-                <div className="bottom-grid">
+                <div className="bottoms-grid">
                     <p>Customer Care</p>
-                    <span><a>About</a> <a>Contact</a> <a>Events</a></span>
+                    <div><a>About</a> <a>Contact</a> <a>Events</a></div>
                 </div>
-                <div className="bottom-grid">
+                <div className="bottoms-grid">
                     <p>Find what your'e looking for</p>
                     <input placeholder="Search products"></input>
                 </div>
-                <div className="bottom-grid">
+                <div className="bottoms-grid">
                     <p>Let's get social!</p>
-                    <span></span>
+                    {/* <span></span> */}
                 </div>
             </div>
         </div>

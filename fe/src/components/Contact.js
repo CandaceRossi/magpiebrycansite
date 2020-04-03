@@ -82,6 +82,7 @@ const Contact = props => {
           </button>
         </Card.Body>
       </Card>
+      <img src={IMG9592} style={{width:"300px", height:"350px", padding:"none"}} alt="clothes" />
     </div>
   );
 };
