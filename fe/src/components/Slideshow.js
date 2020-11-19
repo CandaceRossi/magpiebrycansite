@@ -37,7 +37,7 @@ class Slideshow extends Component {
                         <div className="cards-slider-wrapper" style={{
                             'transform': `translateX(-${property.index * (100 / properties.length)}%)`
                         }}>
-                            {properties.map(property => <Card property={property} key={property._id} property={property} />)}
+                            {properties.map(property => <Card property={property} key={property._id} />)}
 
                         </div>
                     </div>

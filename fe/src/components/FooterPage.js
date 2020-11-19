@@ -7,7 +7,7 @@ const FooterPage = () => {
         <div>
             <div className="footer-page">
                 <div className="footer-grid">
-                    <span><a>PRIVACY POLICY</a> <a>TERMS AND CONDITIONS</a> <a>FAQS</a></span>
+                    <span><a href="">PRIVACY POLICY</a> <a href="">TERMS AND CONDITIONS</a> <a href="">FAQS</a></span>
                 </div>
                 <div className="footer-grid">
                     <p>© 2020 Magpie Designs All Rights Reserved.</p>

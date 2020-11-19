@@ -24,7 +24,7 @@ const SignUp = (props) => {
     <div>
       <div className="sign-up-balance">
         <Card style={{ width: '20rem' }}>
-          <img variant="top" width="100%" src="images/9565" alt="Card image cap" />
+          <img variant="top" width="100%" src="9565" alt="Card image cap" />
           {/* <Card.Img variant="top" src=".img-9565.jpg/100px180?text=Image cap" class="img-thumbnail" alt="top" /> */}
           <Card.Body>
             <Card.Title>Sign Up</Card.Title>

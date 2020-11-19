@@ -18,7 +18,8 @@ import Item from "./components/Item";
 import data from "./data";
 import Home from "./components/Home";
 import ProductContext from "./contexts/ProductContext";
-import CartContext from "./contexts/CartContext";
+// import CartContext from "./contexts/CartContext";
+import {CartProvider} from "./contexts/CartContext";
 import ShoppingCart from "./components/ShoppingCart";
 import Maglogo from "./components/Maglogo";
 import Slideshow from "./components/Slideshow";
@@ -32,17 +33,17 @@ const App = () => {
   const [items] = useState(data);
   const [cart, setCart] = useState([]);
 
-  const addItem = item => {
+  const addItem = (item) => {
     setCart([...cart, item]);
-    console.log(cart);
+    console.log("yo get at these", item)
   };
 
   const removeItem = id => {
-    setCart(...cart.filter(item => item.id !== id));
+    setCart([...cart].filter(item => item.id !== id));
   };
   return (
     <ProductContext.Provider value={{ items, addItem }}>
-      <CartContext.Provider value={{ cart, removeItem }}>
+      <CartProvider value={{ cart, removeItem }}>
         <div className="App">
 
           <div className="component-list">
@@ -74,10 +75,9 @@ const App = () => {
                 path="/ShoppingCart"
                 render={props => (
                   <ShoppingCart
-                    cart={cart}
-                    items={items}
                     {...props}
-                    setCart={setCart}
+                    items={items}
+                    cart={cart}
                     removeItem={removeItem}
                   />
                 )}
@@ -97,7 +97,7 @@ const App = () => {
           </div>
         </div>
 
-      </CartContext.Provider>
+      </CartProvider>
     </ProductContext.Provider>
   );
 };
