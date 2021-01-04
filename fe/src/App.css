@@ -64,6 +64,7 @@
         color: #683B2B;
         /* text-shadow: 1px 1px darkslategrey; */
         font-weight: bold;
+        font-style: italic;
         padding: 0px 15px;
         margin: 0px;
         border-right: 1px solid #D49E8D;
@@ -128,14 +129,18 @@
     .balance-contact {
         width: 100%;
         margin: 0 auto;
-        padding: 0px;
         opacity: 0.7;
         padding: 20px;
+        border: 2px solid green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
-    .balance-contact .Card {
-        padding: 0px;
-        font-weight: bold;
+    .balance-contact .card {
+        border: 2px solid blue;
+        margin: 0 auto;
+        box-sizing: border-box;
     }
     
     .balance-contact .card-body {
@@ -147,6 +152,7 @@
     
     .balance-contact .card-title {
         font-family: "Comic Sans MS", cursive, sans-serif;
+        font-style: italic;
     }
     
     .list-group-item {
@@ -496,6 +502,15 @@
         margin: 0 20px;
     }
     
+    .slideshow {
+        width: 100%;
+        height: 315px;
+        margin: 0 auto;
+    }
+    /* .page {
+       
+    } */
+    
     .cards-slider-wrapper {
         display: flex;
         position: absolute;
@@ -539,4 +554,72 @@
     
     .cards-slider img:hover {
         transform: scale(1.1);
+    }
+    /* .below {
+        width: 100%;
+        display: flex;
+    } */
+    
+    .bottom-page {
+        width: 100%;
+        height: 100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        background: rgba(231, 172, 154, 0.322);
+        /* border-top: 3px solid #B08401; */
+    }
+    
+    .bottoms-grid {
+        width: 250px;
+        height: 100px;
+        margin: 0 auto;
+        border: 2px solid red;
+        padding-left: none !important;
+        padding-right: none !important;
+    }
+    
+    .bottoms-grid p {
+        margin: 0 auto;
+        /* padding-bottom: 20px; */
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-style: italic;
+        font-size: 1.3rem;
+        color: #2b2b28;
+        border: 2px solid green;
+        padding: none !important;
+    }
+    
+    .bottoms-grid a {
+        margin: 0 auto;
+        /* padding: 0px 20px; */
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-size: 1rem;
+        color: #683B2B !important;
+        padding: none !important;
+    }
+    
+    .bottoms-grid a:hover {
+        border-bottom: solid 3px rgb(231, 172, 154);
+        cursor: pointer;
+        padding: none !important;
+    }
+    
+    .footer-page {
+        margin: 0 auto;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(104, 59, 43, 0.473);
+        /* border-top: 3px solid #B08401; */
+    }
+    
+    .footer-grid {
+        font-size: .65rem;
+    }
+    
+    .footer-grid a {
+        padding: 0px 10px;
     }
