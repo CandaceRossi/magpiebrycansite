@@ -5,10 +5,10 @@ const Lastnav = () => {
   return (
     <div className="lastnav">
       <Navbar>
-        <Nav.Link href="/Jewelry">Jewelry</Nav.Link>
-        <Nav.Link href="/Handbags">Handbags</Nav.Link>
-        <Nav.Link href="/HomeGoods">Home Goods</Nav.Link>
-        <Nav.Link href="/Apparel">Apparel</Nav.Link>
+        <Nav.Link href="/Jewelry">JEWELRY</Nav.Link>
+        <Nav.Link href="/Handbags">HANDBAGS</Nav.Link>
+        <Nav.Link href="/HomeGoods">HOME GOODS</Nav.Link>
+        <Nav.Link href="/Apparel">APPAREL</Nav.Link>
       </Navbar>
     </div>
   );
@@ -17,3 +17,4 @@ const Lastnav = () => {
 export default Lastnav;
 
 // nav justify-content-end col-xs-4
+

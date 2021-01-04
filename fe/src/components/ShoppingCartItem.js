@@ -2,7 +2,7 @@ import React from "react";
 
 const ShoppingCartItem = props => {
   return (
-    <div className="shopping-cart_item">
+    <div className="shopping-cart-item">
       <img src={props.imageUrl} alt={`${props.name}`} />
 
       <div>

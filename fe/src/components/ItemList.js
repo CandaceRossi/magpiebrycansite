@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import ProductContext from "../contexts/ProductContext";
-import Item from "./Item";
+// import CartContext from "../contexts/CartContext";
+// import Item from "./Item";
 
-const ItemList = props => {
+const ItemList = () => {
   const { items, addItem } = useContext(ProductContext);
+  // const { cart } = useContext(CartContext);
   console.log("here are the products", items);
   return (
     <div className="items-list-wrapper">
@@ -25,7 +27,7 @@ const ItemList = props => {
               <p>{item.name}</p>
               <p>${item.price}</p>
               <button
-                onClick={() => addItem(item)}
+                onClick={addItem}
                 className="md-button shop-button"
               >
                 Add To Cart

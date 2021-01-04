@@ -1,14 +1,13 @@
 import React, { useContext } from "react";
-// import CartContext from "../contexts/CartContext";
-
+import {CartContext} from "../contexts/CartContext";
 import ShoppingCartItem from "./ShoppingCartItem";
 
-const ShoppingCart = props => {
-  // const { cart, removeItem } = useContext(CartContext);
+const ShoppingCart = () => {
+  const { cart, removeItem } = useContext(CartContext);
 
-  console.log("CART ITEMS?", props.cart);
+  console.log("CART ITEMS?", cart);
   const getCartTotal = () => {
-    return props.cart
+    return cart
       .reduce((acc, value) => {
         return acc + value.price;
       }, 0)
@@ -17,11 +16,11 @@ const ShoppingCart = props => {
 
   return (
     <div className="shopping-cart">
-      {props.cart.map(item => (
+      {cart.map((item) => (
         <ShoppingCartItem
-          key={props.item.id}
-          item={props.item}
-          removeItem={props.removeItem}
+          key={item.id}
+          item={item}
+          removeItem={removeItem}
         />
       ))}
 
