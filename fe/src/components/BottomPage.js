@@ -8,15 +8,15 @@ const BottomPage = () => {
             <div className="bottom-page">
                 <div className="bottoms-grid">
                     <p>Customer Care</p>
-                    <div><a href="">About</a> <a href="">Contact</a> <a href="">Events</a></div>
+                    <div className="bottoms-list"><a href="">About</a> <a href="">Contact</a> <a href="">Events</a></div>
                 </div>
                 <div className="bottoms-grid">
-                    <p>Find what your'e looking for</p>
-                    <input placeholder="Search products"></input>
+                    <p>Find what you're looking for</p>
+                    <input style={{marginTop: "15px"}} placeholder="Search products"></input>
                 </div>
                 <div className="bottoms-grid">
                     <p>Let's get social!</p>
-                    {/* <span></span> */}
+                   <div style={{marginTop: "15px"}}><a href="">IG</a> <a href="">Twitter</a> <a href="">Facebook</a></div>
                 </div>
             </div>
         </div>
