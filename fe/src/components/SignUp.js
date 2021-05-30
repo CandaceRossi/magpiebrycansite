@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
+import babynatural from "../images/babynatural.jpg";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
 
 const SignUp = (props) => {
@@ -21,10 +22,10 @@ const SignUp = (props) => {
   };
 
   return (
-    <div>
-      <div className="sign-up-balance">
-        <Card style={{ width: '20rem' }}>
-          <img variant="top" width="100%" src="9565" alt="Card image cap" />
+    <div style={{marginTop:"3%", marginBottom: "3%"}}>
+      <div className="balance-contact">
+        <Card>
+          <img src={babynatural} variant="top" width="100%" height="180px" alt="Card image cap" />
           {/* <Card.Img variant="top" src=".img-9565.jpg/100px180?text=Image cap" class="img-thumbnail" alt="top" /> */}
           <Card.Body>
             <Card.Title>Sign Up</Card.Title>
@@ -34,6 +35,7 @@ const SignUp = (props) => {
           <ListGroup className="list-group-flush">
             <ListGroupItem>
               <input
+               style={{ width: '18rem', height: '3rem', float: "left" }}
                 // className="input"
                 id="firstName"
                 type="text"
@@ -44,6 +46,7 @@ const SignUp = (props) => {
               />
             </ListGroupItem>
             <ListGroupItem> <input
+             style={{ width: '18rem', height: '3rem', float: "left" }}
               //       className="input"
               id="lastName"
               type="text"
@@ -54,6 +57,7 @@ const SignUp = (props) => {
             />
             </ListGroupItem>
             <ListGroupItem> <input
+             style={{ width: '18rem', height: '3rem', float: "left" }}
               // className="input"
               id="email"
               type="email"
@@ -65,6 +69,7 @@ const SignUp = (props) => {
             </ListGroupItem>
             <ListGroupItem>
               <input
+               style={{ width: '18rem', height: '3rem', float: "left" }}
                 //       className="input"
                 id="birthday"
                 type="date"
@@ -76,7 +81,7 @@ const SignUp = (props) => {
             </ListGroupItem>
           </ListGroup>
           <Card.Body>
-            <button className="md-button shop-button" type="submit" onSubmit={submitForm}>
+            <button className="md-button shop-button contact-button" type="submit" onSubmit={submitForm}>
               Submit
           </button>
           </Card.Body>

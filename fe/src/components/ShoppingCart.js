@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import {CartContext} from "../contexts/CartContext";
+import CartContext from "../contexts/CartContext";
 import ShoppingCartItem from "./ShoppingCartItem";
 
 const ShoppingCart = () => {
   const { cart, removeItem } = useContext(CartContext);
 
-  console.log("CART ITEMS?", cart);
+  console.log("CART ITEMS!?", cart);
   const getCartTotal = () => {
     return cart
       .reduce((acc, value) => {
@@ -16,20 +16,20 @@ const ShoppingCart = () => {
 
   return (
     <div className="shopping-cart">
-      {cart.map((item) => (
+      {cart.map(item => (
         <ShoppingCartItem
           key={item.id}
           item={item}
+          {...item}
           removeItem={removeItem}
-        />
+        /> 
       ))}
-
       <div className="shopping-cart__checkout">
         <p>Total: ${getCartTotal()}</p>
         <button>Checkout</button>
-      </div>
-    </div>
+      </div>    
+  </div>
   );
-};
+    };
 
 export default ShoppingCart;

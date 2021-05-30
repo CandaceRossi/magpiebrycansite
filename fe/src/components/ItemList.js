@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import ProductContext from "../contexts/ProductContext";
-// import CartContext from "../contexts/CartContext";
+
 // import Item from "./Item";
 
 const ItemList = () => {
   const { items, addItem } = useContext(ProductContext);
-  // const { cart } = useContext(CartContext);
+  
   console.log("here are the products", items);
   return (
     <div className="items-list-wrapper">
@@ -27,7 +27,7 @@ const ItemList = () => {
               <p>{item.name}</p>
               <p>${item.price}</p>
               <button
-                onClick={addItem}
+                onClick={() => addItem(item)}
                 className="md-button shop-button"
               >
                 Add To Cart

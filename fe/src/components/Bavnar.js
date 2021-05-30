@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { Nav, Navbar } from "react-bootstrap";
-import { CartContext } from "../contexts/CartContext";
+import CartContext from "../contexts/CartContext";
 
 
 const Bavnar = () => {
-  const { ...cart } = useContext(CartContext);
-  console.log("Nav Cart Items?", cart);
+  const { cart } = useContext(CartContext);
+  console.log("Nav Cart Items!?", cart);
   return (
     <div className="bavnar">
       <Navbar>

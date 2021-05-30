@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 
-
 import Bavnar from "./components/Bavnar";
 import Midnav from "./components/Midnav";
 import Lastnav from "./components/Lastnav";
@@ -18,8 +17,8 @@ import Item from "./components/Item";
 import data from "./data";
 import Home from "./components/Home";
 import ProductContext from "./contexts/ProductContext";
-// import CartContext from "./contexts/CartContext";
-import {CartProvider} from "./contexts/CartContext";
+import CartContext from "./contexts/CartContext";
+// import {CartProvider} from "./contexts/CartContext";
 import ShoppingCart from "./components/ShoppingCart";
 import Maglogo from "./components/Maglogo";
 import Slideshow from "./components/Slideshow";
@@ -43,7 +42,8 @@ const App = () => {
   };
   return (
     <ProductContext.Provider value={{ items, addItem }}>
-      <CartProvider value={{ cart, removeItem }}>
+    <CartContext.Provider value={{ cart, removeItem }}>
+      {/* <CartProvider value={{ cart, removeItem }}> */}
         <div className="App">
 
           <div className="component-list">
@@ -75,13 +75,14 @@ const App = () => {
                 path="/ShoppingCart"
                 render={props => (
                   <ShoppingCart
-                    {...props}
-                    items={items}
                     cart={cart}
-                    removeItem={removeItem}
-                  />
+                    {...props}
+                    removeItem={removeItem}/>
                 )}
               />
+
+              
+
               <Route exact path="/Contact" component={Contact} />
               <Route exact path="/About" component={About} />
               <Route exact path="/SignUp" component={SignUp} />
@@ -91,13 +92,15 @@ const App = () => {
               <Route exact path="/HomeGoods" component={HomeGoods} />
               <Route exact path="/Apparel" component={Apparel} />
             </Switch>
+            <footer className="endofpage">
             <Slideshow />
             <BottomPage />
             <FooterPage />
+            </footer>
           </div>
         </div>
-
-      </CartProvider>
+      {/* </CartProvider> */}
+       </CartContext.Provider>
     </ProductContext.Provider>
   );
 };

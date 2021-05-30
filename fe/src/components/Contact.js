@@ -24,14 +24,13 @@ const Contact = props => {
 
   return (
     <div className="balance-contact">
-      <Card style={{ width: '25rem', border: 'none' }}>
+      <Card>
         {/* <img variant="top" width="100%" src="images/9565" alt="Card image cap" /> */}
         {/* <Card.Img variant="top" src=".img-9565.jpg/100px180?text=Image cap" class="img-thumbnail" alt="top" /> */}
         <Card.Body>
           <Card.Title>Have Questions?</Card.Title>
-          <Card.Text> For More Info</Card.Text>
-          <Card.Text> Contact Us</Card.Text>
-          <Card.Text>Email</Card.Text>
+          <Card.Text> For More Info Contact Us</Card.Text>
+          
         </Card.Body>
         <ListGroup>
           <ListGroupItem>
@@ -82,7 +81,7 @@ const Contact = props => {
           </button>
         </Card.Body>
       </Card>
-      <img src={IMG9592} style={{width:"300px", height:"350px", padding:"none"}} alt="clothes" />
+      <img className="contactimage" src={IMG9592} style={{marginTop: "2%", width:"350px", height:"400px", padding:"none"}} alt="clothes" />
     </div>
   );
 };
