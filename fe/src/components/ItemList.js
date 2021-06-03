@@ -32,6 +32,12 @@ const ItemList = () => {
               >
                 Add To Cart
               </button>
+               {/* <button
+                onClick={() => addItem(item.id, 1)}
+                className="md-button shop-button"
+              >
+                Add To Cart
+              </button> */}
             </div>
           </div>
         );

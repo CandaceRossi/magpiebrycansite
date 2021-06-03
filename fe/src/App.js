@@ -30,19 +30,133 @@ import FooterPage from "./components/FooterPage";
 
 const App = () => {
   const [items] = useState(data);
+  // const [items, setItems] = useState([]);
+  const [hasError, setError] = useState(false);
   const [cart, setCart] = useState([]);
+  const [payload, setPayloader] = useState({});
 
+
+  //add item function
   const addItem = (item) => {
     setCart([...cart, item]);
     console.log("yo get at these", item)
   };
 
+  // async function addItem(id, quantity) {
+  //   try {
+  //     const response = await fetch("http://localhost:4000/cart", {
+  //       method: "POST",
+  //       body: JSON.stringify({
+  //         itemId: id,
+  //         quantity: quantity,
+  //       }),
+  //       headers: {
+  //         "Content-type": "application/json; charset=UTF-8",
+  //       },
+  //     })
+  //     let data = await response.json()
+  //     console.log(data)
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // }
+
+
+  //remove item function
   const removeItem = id => {
     setCart([...cart].filter(item => item.id !== id));
   };
+
+// API Get Method
+  async function fetchData() {
+    const res = await fetch("http://localhost:4000/product");
+    res
+      .json()
+      .then((res) => {
+        console.log(res.data);
+        setItems(res.data);
+      })
+      .catch((error) => {
+        setError(error);
+      });
+  }
+  async function addItem(id, quantity) {
+    try {
+      const response = await fetch("http://localhost:4000/cart", {
+        method: "POST",
+        body: JSON.stringify({
+          productId: id,
+          quantity: quantity,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      });
+      let data = await response.json();
+      alert("Item Added To Cart");
+      console.log(data);
+    } catch (err) {
+      alert("Something Went Wrong");
+      console.log(err);
+    }
+  }
+  useEffect(() => {
+    fetchData();
+  }, []);
+  console.log(items);
+
+  //API Fetch Cart
+  async function fetchCart() {
+    const res = await fetch("http://localhost:4000/cart");
+    res
+      .json()
+      .then((res) => {
+        console.log(res.data.items);
+        setCart(res.data.items);
+        setPayloader(res.data);
+      })
+      .catch((error) => {
+        setError(error);
+      });
+  }
+  async function increaseQty(id) {
+    try {
+      const res = await fetch("http://localhost:4000/cart", {
+        method: "POST",
+        body: JSON.stringify({
+          itemId: id,
+          quantity: 1,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      });
+      console.log(res);
+      fetchCart();
+      alert("Item Increamented");
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  async function emptyCart() {
+    try {
+      const res = await fetch("http://localhost:4000/cart/empty-cart", {
+        method: "DELETE",
+      });
+      await res.json();
+      fetchCart();
+      props.history.push("/");
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  useEffect(() => {
+    fetchCart();
+  }, []);
+
   return (
     <ProductContext.Provider value={{ items, addItem }}>
-    <CartContext.Provider value={{ cart, removeItem }}>
+    <CartContext.Provider value={{ cart, removeItem, fetchCart, increaseQty, emptyCart }}>
       {/* <CartProvider value={{ cart, removeItem }}> */}
         <div className="App">
 
