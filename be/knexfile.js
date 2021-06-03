@@ -4,6 +4,10 @@ module.exports = {
 
   development: {
     client: 'sqlite3',
+    useNullAsDefault: true,
+    connection: {
+      filename: './data/magpie.db3',
+    },
     connection: {
       filename: './dev.sqlite3'
     },
