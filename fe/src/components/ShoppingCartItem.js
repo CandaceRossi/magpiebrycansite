@@ -1,8 +1,8 @@
 import React from "react";
 
 const ShoppingCartItem = (props) => {
+  console.log("theheck", props)
   return (
-   
     <div className="shopping-cart-item">
     
       <img src={props.item.imageUrl} alt={`${props.item.name}`} />

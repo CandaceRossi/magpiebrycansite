@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 
 import Bavnar from "./components/Bavnar";
@@ -28,12 +28,17 @@ import FooterPage from "./components/FooterPage";
 
 // import AddToEmailList from "./components/AddToEmailList";
 
+const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || "[]")
+
 const App = () => {
   const [items] = useState(data);
-  // const [items, setItems] = useState([]);
   const [hasError, setError] = useState(false);
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(cartFromLocalStorage);
   const [payload, setPayloader] = useState({});
+
+useEffect(() => {
+localStorage.setItem('cart', JSON.stringify(cart));
+}, [cart]);
 
 
   //add item function
@@ -68,42 +73,42 @@ const App = () => {
   };
 
 // API Get Method
-  async function fetchData() {
-    const res = await fetch("http://localhost:4000/product");
-    res
-      .json()
-      .then((res) => {
-        console.log(res.data);
-        setItems(res.data);
-      })
-      .catch((error) => {
-        setError(error);
-      });
-  }
-  async function addItem(id, quantity) {
-    try {
-      const response = await fetch("http://localhost:4000/cart", {
-        method: "POST",
-        body: JSON.stringify({
-          productId: id,
-          quantity: quantity,
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      });
-      let data = await response.json();
-      alert("Item Added To Cart");
-      console.log(data);
-    } catch (err) {
-      alert("Something Went Wrong");
-      console.log(err);
-    }
-  }
-  useEffect(() => {
-    fetchData();
-  }, []);
-  console.log(items);
+  // async function fetchData() {
+  //   const res = await fetch("http://localhost:4000/product");
+  //   res
+  //     .json()
+  //     .then((res) => {
+  //       console.log(res.data);
+  //       setItems(res.data);
+  //     })
+  //     .catch((error) => {
+  //       setError(error);
+  //     });
+  // }
+  // async function addItem(id, quantity) {
+  //   try {
+  //     const response = await fetch("http://localhost:4000/cart", {
+  //       method: "POST",
+  //       body: JSON.stringify({
+  //         productId: id,
+  //         quantity: quantity,
+  //       }),
+  //       headers: {
+  //         "Content-type": "application/json; charset=UTF-8",
+  //       },
+  //     });
+  //     let data = await response.json();
+  //     alert("Item Added To Cart");
+  //     console.log(data);
+  //   } catch (err) {
+  //     alert("Something Went Wrong");
+  //     console.log(err);
+  //   }
+  // }
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+  // console.log(items);
 
   //API Fetch Cart
   async function fetchCart() {
@@ -119,26 +124,26 @@ const App = () => {
         setError(error);
       });
   }
-  async function increaseQty(id) {
-    try {
-      const res = await fetch("http://localhost:4000/cart", {
-        method: "POST",
-        body: JSON.stringify({
-          itemId: id,
-          quantity: 1,
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      });
-      console.log(res);
-      fetchCart();
-      alert("Item Increamented");
-    } catch (err) {
-      console.log(err);
-    }
-  }
-  async function emptyCart() {
+  // async function increaseQty(id) {
+  //   try {
+  //     const res = await fetch("http://localhost:4000/cart", {
+  //       method: "POST",
+  //       body: JSON.stringify({
+  //         itemId: id,
+  //         quantity: 1,
+  //       }),
+  //       headers: {
+  //         "Content-type": "application/json; charset=UTF-8",
+  //       },
+  //     });
+  //     console.log(res);
+  //     fetchCart();
+  //     alert("Item Increamented");
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }
+  async function emptyCart(props) {
     try {
       const res = await fetch("http://localhost:4000/cart/empty-cart", {
         method: "DELETE",
@@ -150,13 +155,13 @@ const App = () => {
       console.log(err);
     }
   }
-  useEffect(() => {
-    fetchCart();
-  }, []);
+  // useEffect(() => {
+  //   fetchCart();
+  // }, []);
 
   return (
     <ProductContext.Provider value={{ items, addItem }}>
-    <CartContext.Provider value={{ cart, removeItem, fetchCart, increaseQty, emptyCart }}>
+    <CartContext.Provider value={{ cart, removeItem, fetchCart, emptyCart }}>
       {/* <CartProvider value={{ cart, removeItem }}> */}
         <div className="App">
 
