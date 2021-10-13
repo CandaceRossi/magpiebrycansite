@@ -8,7 +8,7 @@ const ShoppingCartItem = (props) => {
       <img src={props.item.imageUrl} alt={`${props.item.name}`} />
 
       <div>
-        <h1>{props.item.name}</h1>
+        <h1 className="makemesmaller">{props.item.name}</h1>
         <p>$ {props.item.price}</p>
         <button onClick={() => props.removeItem(props.item.id)}>
           Remove from cart
