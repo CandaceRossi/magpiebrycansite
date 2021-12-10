@@ -1,3 +1,5 @@
+    
+      
     body {
         background: #DED1BD;
         overflow-x: hidden;
@@ -6,6 +8,7 @@
         display: grid;
         grid-template-rows: 1fr auto;
     }
+
     
     .App {
         font-family: sans-serif;
@@ -711,3 +714,4 @@
     .footer-grid a {
         padding: 0px 10px;
     }
+
