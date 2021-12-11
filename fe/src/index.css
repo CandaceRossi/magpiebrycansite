@@ -30,6 +30,7 @@
         .navbar {
             background: bisque;
             opacity: .25%;
+            border: 3px solid saddlebrown;
         }
         
         .component-list {
