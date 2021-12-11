@@ -1,13 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
+import ItemList from "./ItemList";
 
-class HomeGoods extends Component {
-  render() {
-    return (
+const HomeGoods = () =>{
+
+return (
+
       <div className="component-style">
-        <h2>Home Goods</h2>
-      </div>
+        <h2>HomeGoods</h2>
+  
+    <div className="items-list-wrapper">
+    <ItemList />
+     </div> 
+    </div>
+   
     );
   }
-}
-
 export default HomeGoods;

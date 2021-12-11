@@ -1,13 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
+import ItemList from "./ItemList";
 
-class Apparel extends Component {
-  render() {
-    return (
+const Apparel = () =>{
+
+return (
+
       <div className="component-style">
         <h2>Apparel</h2>
-      </div>
+  
+    <div className="items-list-wrapper">
+    <ItemList />
+     </div> 
+    </div>
+   
     );
   }
-}
 
 export default Apparel;

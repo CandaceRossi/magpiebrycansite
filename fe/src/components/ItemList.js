@@ -9,6 +9,7 @@ const ItemList = () => {
   
   console.log("here are the products", items);
   return (
+    
     <div className="items-list-wrapper">
       {items.map(item => {
         return (

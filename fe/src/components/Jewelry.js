@@ -1,13 +1,20 @@
-import React, { Component } from "react";
+import React from "react";
+import ItemList from "./ItemList";
 
-class Jewelry extends Component {
-  render() {
-    return (
+const Jewelry = () =>{
+
+return (
+
       <div className="component-style">
         <h2>Jewelry</h2>
-      </div>
+  
+    <div className="items-list-wrapper">
+    <ItemList />
+     </div> 
+    </div>
+   
     );
   }
-}
 
 export default Jewelry;
+
