@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 import Card from "./Card";
-import data from "../data/data";
+import data2 from "../datas/data2";
 
 class Slideshow extends Component {
     constructor(props) {
         super();
         this.state = {
             //set piture images
-            properties: data.properties,
-            property: data.properties[0]
+            properties: data2.properties,
+            property: data2.properties[0]
         }
     }
     nextProperty = () => {
         const newIndex = this.state.property.index + 1;
         this.setState({
-            property: data.properties[newIndex]
+            property: data2.properties[newIndex]
         })
     }
     prevProperty = () => {
         const newIndex = this.state.property.index - 1;
         this.setState({
-            property: data.properties[newIndex]
+            property: data2.properties[newIndex]
         })
     }
     render() {
@@ -28,7 +28,7 @@ class Slideshow extends Component {
         return (
             <div className="slideshow">
                 <button onClick={() => this.prevProperty()} disabled={property.index === 0}>Prev</button>
-                <button onClick={() => this.nextProperty()} disabled={property.index === data.properties.length - 1}>Next</button>
+                <button onClick={() => this.nextProperty()} disabled={property.index === data2.properties.length - 1}>Next</button>
                 <div className="page">
                     {/* <section>
                         <img src={logo} className="Slideshow-logo" alt="logo" />

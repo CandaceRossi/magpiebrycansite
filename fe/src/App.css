@@ -343,6 +343,8 @@
     }
     
     .item-card-image {
+        width: 250px;
+        height: 250px;
         width: 100%;
         transition: transform 0.5s ease;
     }
