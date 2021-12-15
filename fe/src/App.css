@@ -868,6 +868,16 @@
 
     @media screen and (min-width: 320px) and (max-width: 600px) {
 
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* height: 35px; */
+            /* padding: 0px; */
+            margin: 0 auto;
+            min-width: 100%;
+        }
+
         .bavnar {
             display: flex;
             flex-direction: row;
@@ -894,18 +904,9 @@
             margin: auto;
             display: flex;
             flex-direction: row;
-            justify-items: center;    
+            justify-items: center; 
+               
         }
 
-        .container > img {
-            width: 700px;
-        }
-
-        .carousel.slide {
-
-            margin: 0 auto;
-            display:block;
-            width: 100%;
-        }
-        
+       
     }
