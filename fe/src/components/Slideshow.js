@@ -27,9 +27,11 @@ class Slideshow extends Component {
         const { properties, property } = this.state;
         return (
             <div className="slideshow">
-                <button onClick={() => this.prevProperty()} disabled={property.index === 0}>Prev</button>
-                <button onClick={() => this.nextProperty()} disabled={property.index === data2.properties.length - 1}>Next</button>
+               
                 <div className="page">
+                 <button onClick={() => this.prevProperty()} disabled={property.index === 0}>Prev</button>
+                <button onClick={() => this.nextProperty()} disabled={property.index === data2.properties.length - 1}>Next</button>
+                          </div>
                     {/* <section>
                         <img src={logo} className="Slideshow-logo" alt="logo" />
                     </section> */}
@@ -40,7 +42,7 @@ class Slideshow extends Component {
                             {properties.map(property => <Card property={property} key={property._id} />)}
 
                         </div>
-                    </div>
+             
 
                 </div>
             </div>

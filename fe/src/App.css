@@ -2,17 +2,14 @@
         background: #DED1BD;
         overflow-x: hidden;
         /* display: flex; */
-        min-height: 100vh;
-        display: grid;
-        grid-template-rows: 1fr auto;
+        height: 100vh;
     }
     
     .App {
-        font-family: sans-serif;
-        text-align: center;
         width: 100%;
         height: 100%;
         margin: 0 auto;
+        overflow-x: hidden;
         /* display: grid; */
         /* display: flex;
         flex-direction: column; */
@@ -23,7 +20,6 @@
         width: 100%;
         height: 100%;
         box-sizing: border-box;
-        display: block !important;
         /* position: absolute !important; */
     }
     
@@ -43,6 +39,7 @@
     .bavnar {
         display: flex;
         height: 25px;
+        width: 100% !important;
         justify-content: flex-end;
         padding: 0px 225px;
         margin: 0 auto;
@@ -64,6 +61,7 @@
     }
     
     .midnav {
+        width: 100% !important;
         font-size: .95rem;
         display: flex;
         justify-content: flex-end;
@@ -581,6 +579,13 @@
         width: 100%;
         height: 315px;
         margin: 0 auto;
+    }
+    
+    .slideshow .page {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
     }
     
     .cards-slider-wrapper {
