@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 
-import Bavnar from "./components/Bavnar";
-import Midnav from "./components/Midnav";
+// import Bavnar from "./components/Bavnar";
+// import Midnav from "./components/Midnav";
 import Lastnav from "./components/Lastnav";
 import Contact from "./components/Contact";
 import About from "./components/About";
@@ -47,68 +47,11 @@ localStorage.setItem('cart', JSON.stringify(cart));
     console.log("yo get at these", item)
   };
 
-  // async function addItem(id, quantity) {
-  //   try {
-  //     const response = await fetch("http://localhost:4000/cart", {
-  //       method: "POST",
-  //       body: JSON.stringify({
-  //         itemId: id,
-  //         quantity: quantity,
-  //       }),
-  //       headers: {
-  //         "Content-type": "application/json; charset=UTF-8",
-  //       },
-  //     })
-  //     let data = await response.json()
-  //     console.log(data)
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
-  // }
-
 
   //remove item function
   const removeItem = id => {
     setCart([...cart].filter(item => item.id !== id));
   };
-
-// API Get Method
-  // async function fetchData() {
-  //   const res = await fetch("http://localhost:4000/product");
-  //   res
-  //     .json()
-  //     .then((res) => {
-  //       console.log(res.data);
-  //       setItems(res.data);
-  //     })
-  //     .catch((error) => {
-  //       setError(error);
-  //     });
-  // }
-  // async function addItem(id, quantity) {
-  //   try {
-  //     const response = await fetch("http://localhost:4000/cart", {
-  //       method: "POST",
-  //       body: JSON.stringify({
-  //         productId: id,
-  //         quantity: quantity,
-  //       }),
-  //       headers: {
-  //         "Content-type": "application/json; charset=UTF-8",
-  //       },
-  //     });
-  //     let data = await response.json();
-  //     alert("Item Added To Cart");
-  //     console.log(data);
-  //   } catch (err) {
-  //     alert("Something Went Wrong");
-  //     console.log(err);
-  //   }
-  // }
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
-  // console.log(items);
 
   //API Fetch Cart
   async function fetchCart() {
@@ -124,25 +67,6 @@ localStorage.setItem('cart', JSON.stringify(cart));
         setError(error);
       });
   }
-  // async function increaseQty(id) {
-  //   try {
-  //     const res = await fetch("http://localhost:4000/cart", {
-  //       method: "POST",
-  //       body: JSON.stringify({
-  //         itemId: id,
-  //         quantity: 1,
-  //       }),
-  //       headers: {
-  //         "Content-type": "application/json; charset=UTF-8",
-  //       },
-  //     });
-  //     console.log(res);
-  //     fetchCart();
-  //     alert("Item Increamented");
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // }
   async function emptyCart(props) {
     try {
       const res = await fetch("http://localhost:4000/cart/empty-cart", {
@@ -155,9 +79,7 @@ localStorage.setItem('cart', JSON.stringify(cart));
       console.log(err);
     }
   }
-  // useEffect(() => {
-  //   fetchCart();
-  // }, []);
+ 
 
   return (
     <ProductContext.Provider value={{ items, addItem }}>
@@ -166,11 +88,7 @@ localStorage.setItem('cart', JSON.stringify(cart));
         <div className="App">
 
           <div className="component-list">
-            <Maglogo />
-
             <div className="nav-style">
-              <Bavnar cart={cart} />
-              <Midnav />
               <Lastnav />
             </div>
 
