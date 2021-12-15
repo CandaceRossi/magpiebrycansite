@@ -344,8 +344,9 @@
     
     .item-card-image {
         width: 250px;
-        height: 250px;
+        height: auto;
         width: 100%;
+        overflow: hidden;
         transition: transform 0.5s ease;
     }
     
