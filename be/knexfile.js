@@ -6,10 +6,7 @@ module.exports = {
     client: 'sqlite3',
     useNullAsDefault: true,
     connection: {
-      filename: './data/magpie.db3',
-    },
-    connection: {
-      filename: './dev.sqlite3'
+      filename: './data/betamagpie.db',
     },
     migrations: {
       directory: "./data/migrations"
