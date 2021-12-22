@@ -4,8 +4,9 @@ import ProductContext from "../contexts/ProductContext";
 
 // import Item from "./Item";
 
-const ItemList = () => {
-  const { items, addItem } = useContext(ProductContext);
+const ItemList = ({items}) => {
+  const { addItem } = useContext(ProductContext);
+
   
   console.log("here are the products", items);
   return (

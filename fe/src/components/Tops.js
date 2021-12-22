@@ -1,15 +1,17 @@
 import React, { Component } from "react";
+import ProductContext from "../contexts/ProductContext";
 
-const Tops = props => {
-  //  const [shirts] = useState(data.shirts);
+const Tops = () => {
+  const { items, addItem } = useContext(ProductContext);
+
+  let newItems = items.slice(3,4);
   return (
-    <div>
-      <h2>Tops</h2>
-      <div>
-        <img src="" />
-        <h3>{props.name}</h3>
-        <h3>{props.price}</h3>
-      </div>
+     <div className="component-style">
+        <h2>Jewelry</h2>
+  
+    <div className="items-list-wrapper">
+        <ItemList items={newItems}/>
+     </div> 
     </div>
   );
 };
